@@ -1,0 +1,131 @@
+\pgfplotstablegetelem{\thepart}{[index]\columnIndex}\of{\cronograma}
+\part{\pgfplotsretval}
+\label{part:\thepart}
+\frame{\partpage}
+
+
+
+\begin{frame}[t]{Lógica de Programação com Django}
+	\fontsize{14pt}{15.2}\selectfont{
+		Tutorial de boas-vindas com Django.  \\
+		
+		
+	}\par
+	\vspace{1em}
+	
+	\fontsize{10pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			\item instalação: faça a instalação do django. Comece repetindo o comando abaixo no terminal e se funcionar já era.... 
+			
+			\begin{beamercolorbox}[wd=\textwidth]{warning}
+				|> py -m pip install Django
+			\end{beamercolorbox}
+			
+			\item criação do projeto: entre no diretório que pretende salvar o projeto e repita o comando abaixo no terminal.
+			
+			\begin{beamercolorbox}[wd=\textwidth]{warning}
+				|> django-admin startproject django\_project .
+			\end{beamercolorbox}
+			
+			\item execução: entre no diretório do projeto que foi criado e repita o comando abaixo no terminal.
+			
+			\begin{beamercolorbox}[wd=\textwidth]{warning}
+				|> python manage.py runserver
+			\end{beamercolorbox}
+			
+			\item criação de app: repita o comando abaixo no terminal.
+			
+			\begin{beamercolorbox}[wd=\textwidth]{warning}
+				|> python manage.py startapp pages
+			\end{beamercolorbox}
+			
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Lógica de Programação com Django}
+	\fontsize{14pt}{15.2}\selectfont{
+		...continuando....procure o arquivo -> pages/views.py
+		
+		
+	}\par
+	\vspace{1em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		
+		\begin{beamercolorbox}[wd=\textwidth]{warning}
+			from django.http import HttpResponse\\			
+			\vspace{1em}
+			def home\_page\_view(request):\\
+			\hspace{2em}return HttpResponse("Olá, mundo!")
+			
+		\end{beamercolorbox}
+		
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+\begin{frame}[t]{Lógica de Programação com Django}
+	\fontsize{14pt}{15.2}\selectfont{
+		...continuando....procure o arquivo -> pages/urls.py
+		
+		
+	}\par
+	\vspace{1em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		
+		\begin{beamercolorbox}[wd=\textwidth]{warning}
+			
+			from django.urls import path\\
+			from .views import home\_page\_view\\
+			\vspace{1em}
+			urlpatterns = [\\
+			\hspace{2em}	path("", home\_page\_view),\\
+			]
+			
+		\end{beamercolorbox}
+		
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+\begin{frame}[t]{Lógica de Programação com Django}
+	\fontsize{14pt}{15.2}\selectfont{
+		...continuando....procure o arquivo -> django\_project/urls.py
+		
+		
+	}\par
+	\vspace{1em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		
+		\begin{beamercolorbox}[wd=\textwidth]{warning}
+			
+			from django.contrib import admin\\
+			from django.urls import path, \textbf{include}  \# new \\
+			\vspace{1em}
+			urlpatterns = [\\
+			\hspace{2em}path("admin/", admin.site.urls),\\
+			\hspace{2em}\textbf{path("", include("pages.urls"))},  \# new \\
+			]
+			
+		\end{beamercolorbox}
+		
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+

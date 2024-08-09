@@ -1,0 +1,4 @@
+\frametitle{Programa 001}
+
+	\lstinputlisting[style=Bruno,caption=Exemplo de Código]{outros/codigos/python/001-def.py}
+	

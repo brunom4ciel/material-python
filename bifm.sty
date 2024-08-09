@@ -1,0 +1,1214 @@
+
+% CIn/UFPE presentation theme
+% 27/01/2017 - Bruno Iran Ferreira Maciel - bifm@cin.ufpe.br
+\ProvidesPackage{bifm}[2015/05/20]
+
+\usepackage[stretch=10]{microtype} % microtipografia: funciona no PDFLaTeX e LuaLaTeX (parcialmente em XeLaTeX)
+% atrapalha a copiar texto do PDF
+
+
+
+\setlength\headheight{10pt}
+%--------------------------------------------------
+% para corrigir quebras de linhas corretamente
+%
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+%---------------------------------------------------
+
+%\raggedright
+
+%--------------------------------------------------
+% para corrigir quebras de linhas em url corretamenta
+%
+\newcounter{biburlnumpenalty}
+\newcounter{biburlucpenalty}
+\newcounter{biburllcpenalty}
+\usepackage{hyperref}
+\makeatletter
+\g@addto@macro\UrlBreaks
+{%
+	\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+	\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+	\do\u\do\v\do\w\do\x\do\y\do\z\do\&\do\1\do\2\do\3%
+	\do\4\do\5\do\6\do\7\do\8\do\9\do\0\do\/\do\.%
+}
+\g@addto@macro\UrlSpecials
+{%
+	\do\/{\mbox{\UrlFont/}\hskip 0pt plus 10pt}%
+}
+\makeatother
+\setcounter{biburlucpenalty}{1}  %break URL after uppercase character
+\setcounter{biburlnumpenalty}{1} %break URL after number
+\setcounter{biburllcpenalty}{1}  %break URL after lowercase character
+
+%------------------------------------------
+
+% \addtobeamertemplate{background canvas}{\transslipverticalin}{} %\transfade[duration=1]}{}
+
+
+% \setlength{\emergencystretch}{10pt}
+% \usepackage{showframe}
+
+% \def\sloppy{%
+%   \tolerance 9999%
+%   \emergencystretch 3em%
+%   \hfuzz .5\p@
+%   \vfuzz\hfuzz}
+
+% \def\fussy{%
+%   \emergencystretch\z@
+%   \tolerance 200%
+%   \hfuzz .1\p@
+%   \vfuzz\hfuzz}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[english,brazil]{babel}
+
+%\usepackage[ruled,titlenumbered,linesnumbered,lined,boxed,vlined]{algorithm2e}
+\usepackage{algorithm,algpseudocode}
+
+%\usepackage{wrapfig}
+
+\usepackage{fancybox}
+
+%\usepackage{pifont}   % for \ding
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% configurar listas
+% [topsep=0pt,itemsep=10pt,parsep=0pt,partopsep=0pt]
+
+% \setlist[enumerate]{itemsep=3pt,topsep=3pt}
+% \setlist[enumerate,1]{label=(\roman*)}
+% \setlist[itemize,1]{label=$\times$}
+% \setlist[itemize,2]{label=$\checkmark$}
+% \setlist[itemize,3]{label=$\diamond$}
+% \setlist[itemize,4]{label=$\bullet$}
+
+\setbeamercolor{structure}{fg=purple}  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\usepackage{natbib}
+%\usepackage{bibentry}
+\usepackage{lipsum}
+
+
+\usepackage{float}
+\floatplacement{table}{!htb}
+\floatplacement{figure}{!htb}\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+
+
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{cadmiumyellow}{rgb}{1.0, 0.96, 0.0}
+
+%\usepackage[export]{adjustbox}
+
+\usepackage{pdfpages} %para incluir pdf como páginas
+
+\usepackage[table]{xcolor}
+\usepackage{soul} % font riscada
+
+% Usado para modificar a fonte de todas as tabelas e centralizá-las
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{tabularx}{\centering\scriptsize}
+\BeforeBeginEnvironment{tabular}{\centering\scriptsize}
+%\usepackage{float}
+\floatplacement{table}{!htb}
+\floatplacement{figure}{!htb}
+
+
+\usepackage{graphicx}
+\usepackage{tikz}
+% \usepackage{pgf}
+% \usepackage{tikzscale}
+
+%---------------------------------------
+% p/ usar diagrama de venn
+
+% \usepackage{venndiagram}
+
+\usepackage{tcolorbox}
+
+
+
+
+
+
+
+
+
+
+
+
+\tcbset{width=0.9\textwidth,boxrule=0pt,colback=red,arc=0pt,auto outer arc,left=0pt,right=0pt,boxsep=5pt}
+
+
+%------------------------------------
+
+\usetikzlibrary{shapes,backgrounds}
+\usetikzlibrary{tikzmark,fit,shapes.geometric}
+\usetikzlibrary{shadows,trees}
+
+
+
+
+% % usando tema personalizado. 
+% % arquivo bifm.sty que customiza o estilo beamer
+% \usepackage{bifm}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% para customizar números com vírgula
+%
+%\usepackage{siunitx}
+%\sisetup{
+%	add-decimal-zero = true , % default setting, not needed
+%	output-decimal-marker = {,} ,
+%	group-separator = \, % default setting, not needed
+%}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{pgfplots, pgfplotstable}
+% \usepgfplotslibrary{statistics}
+% \usetikzlibrary{patterns}
+% \pgfplotsset{width=15cm,compat=1.8}
+% \pgfplotsset{compat=1.11,
+%     /pgfplots/ybar legend/.style={
+%     /pgfplots/legend image code/.code={%
+%       \draw[##1,/tikz/.cd,yshift=-0.25em]
+%         (0cm,0cm) rectangle (3pt,0.8em);},
+%   },
+% }
+
+% \pgfplotsset{compat=1.11,
+% 	/pgfplots/ybar legend/.style={
+% 		/pgfplots/legend image code/.code={%
+% 			%\draw[##1,/tikz/.cd,yshift=-0.25em]
+% 			%(0cm,0cm) rectangle (3pt,0.8em);},
+% 			\draw[##1,/tikz/.cd,bar width=8pt,yshift=-0.2em,bar shift=0pt]
+% 			plot coordinates {(0cm,0.8em)};},
+% 	},
+% }
+
+% \pgfplotsset{/pgf/number format/use comma}
+
+
+
+% \usepackage{pgfplotstable}
+\pgfplotsset{compat=1.9}% supress warning
+\usepackage{colortbl}
+
+%\usepackage{qrcode}
+%\usepackage{layout}
+\usepackage{multicol}% Múltiplas colunas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------
+% declaração de nomes de comandos
+%
+\providecommand{\titulo}[1]{\renewcommand{\titulo}{#1}}
+\providecommand{\autor}[1]{\renewcommand{\autor}{#1}}
+\providecommand{\data}[1]{\renewcommand{\data}{#1}}
+\providecommand{\instituicao}[1]{\renewcommand{\instituicao}{#1}}
+\providecommand{\nomecurso}[1]{\renewcommand{\nomecurso}{#1}}
+\providecommand{\programa}[1]{\renewcommand{\programa}{#1}}
+\providecommand{\emailprograma}[1]{\renewcommand{\emailprograma}{#1}}
+\providecommand{\siteprograma}[1]{\renewcommand{\siteprograma}{#1}}
+\providecommand{\local}[1]{\renewcommand{\local}{#1}}
+\providecommand{\disciplina}[1]{\renewcommand{\disciplina}{#1}}
+\providecommand{\turma}[1]{\renewcommand{\turma}{#1}}
+\providecommand{\cargahoraria}[1]{\renewcommand{\cargahoraria}{#1}}
+\providecommand{\alocacao}[1]{\renewcommand{\alocacao}{#1}}
+\providecommand{\figuralogo}[1]{\renewcommand{\figuralogo}{#1}}
+\providecommand{\figuralogocapa}[1]{\renewcommand{\figuralogocapa}{#1}}
+\providecommand{\figuradmca}[1]{\renewcommand{\figuradmca}{#1}}
+\providecommand{\inputFilesStartValue}[1]{\renewcommand{\inputFilesStartValue}{#1}}
+\providecommand{\inputFilesMaxValue}[1]{\renewcommand{\inputFilesMaxValue}{#1}}
+% %
+%-------------------------------------------------
+
+\renewcommand{\inputFilesStartValue}{1}
+\renewcommand{\inputFilesMaxValue}{22}
+
+
+
+% \usepackage{showframe}
+%\usepackage{pifont}
+
+
+%\usepackage{xpatch}
+
+
+
+% \usepackage{transparent}
+% \usepackage{eso-pic}
+% \usepackage[printwatermark]{xwatermark}
+
+%\usepackage{natbib}
+% \bibliographystyle{abbrvnat}
+%\bibliographystyle{plainnat}
+
+% \usepackage{adjustbox}
+
+%\setcitestyle{authoryear,open={(},close={)}}
+
+
+\usepackage{datetime}
+\newdateformat{mydate}{\shortmonthname[\the\month]  \the\year}
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% Comandos de dados para CAPA e FOLHA DE ROSTO 
+% alterado por Bruno Maciel 20/10/2016
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+\newcommand{\yellowcolor}[1]{\colorbox{cadmiumyellow!99}{#1}}
+
+%-------------------------------------
+
+
+
+\usepackage{multirow}
+
+%%%%%%%%%%%%%% THEME %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\RequirePackage{pgf}
+\RequirePackage{graphicx}
+\RequirePackage{url,color,ae}
+\RequirePackage{listings,color,upquote}
+%\RequirePackage{array}
+\urlstyle{sf}
+
+%\pgfdeclareimage[width=\paperwidth]{footer}{rodape-ifsc}
+
+
+
+% \definecolor{kugreen}{RGB}{50,93,61}
+% \definecolor{kugreenlys}{RGB}{132,158,139}
+% \definecolor{kugreenlyslys}{RGB}{173,190,177}
+% \definecolor{kugreenlyslyslys}{RGB}{214,223,216}
+
+\definecolor{AlTitle}{RGB}{255, 190, 190}
+\definecolor{AlBody}{RGB}{213,24,0}
+\definecolor{ExTitle}{RGB}{201, 217, 217}
+\definecolor{vermelhocin}{RGB}{172, 74, 71}
+
+
+
+% \usecolortheme[named=kugreen]{structure}
+% \setbeamercolor{block title}{fg = white, bg = kugreen}
+% \setbeamercolor{block body}{bg = kugreen!15!white}
+% \setbeamercolor{block title alerted}{bg = AlTitle}
+% \setbeamercolor{block body alerted}{bg = AlBody!5!white}
+% \setbeamercolor{block title example}{bg = ExTitle}
+% \setbeamercolor{block body example}{bg = ExTitle!15!white}
+% \setbeamertemplate{blocks}[rounded]
+
+%\setbeamersize{text margin left=5pt,text margin right=5pt}
+
+
+
+
+
+\setbeamertemplate{navigation symbols}{}
+%\addtobeamertemplate{frametitle}{}{\color{kugreen}
+%\pgfline{\pgfpoint{1mm}{-2mm}}{\pgfpoint{10.8cm}{-2mm}}}
+%\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{title}{series=\bfseries}
+\useinnertheme{rectangles}
+\setbeamertemplate{headline}[text line]{}
+
+
+
+% \newcommand{\Linha}{%
+% \raisebox{-3mm}[0pt][0pt]{%
+% \begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
+% \pgfsetlinewidth{1mm}
+% \color{kugreen}
+% \pgfline{\pgfpoint{1.2mm}{-2mm}}{\pgfpoint{10cm}{-2mm}}
+% \end{pgfpicture}}}
+
+% \addtobeamertemplate{title page}{\Linha}
+
+\setbeamerfont{footline}{series=\bfseries }
+
+% \setbeamertemplate{footline}{
+% %\pgfuseimage{footer}%
+% \color{black}
+% \pgftext[at=\pgfpoint{-35pt}{5pt},center,bottom]{\insertframenumber/\inserttotalframenumber}
+% }
+
+
+
+% \setbeamertemplate{footline}
+% {
+%   \leavevmode%
+%   \hbox{%
+%   \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+%     \usebeamerfont{author in head/foot}{CIn/UFPE \parbox{0.9\linewidth}{
+%     \raggedleft\insertframenumber
+%   } }
+%   \end{beamercolorbox}%
+% %   \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+% %     \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{3em}
+% %     \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+% %   \end{beamercolorbox}
+% }%
+%   \vskip0pt%
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%--------- Insercao de codigo fonte nos slides --------------------%
+\definecolor{hellgelb}{rgb}{1,1,0.9}
+\definecolor{colBack}{rgb}{1,1,.98}
+\definecolor{colKeys}{rgb}{0,0,0}
+\definecolor{colIdentifier}{rgb}{0,0,0.9}
+\definecolor{colComments}{rgb}{.4,.4,.4}
+\definecolor{colString}{rgb}{0,0,0.6}
+
+\definecolor{cinColor}{HTML}{00a59e} %cor padrão
+
+% \definecolor{cinColor}{HTML}{008f4c} %title
+\definecolor{colorFanPage}{HTML}{D8D8D8} %body text page first
+\definecolor{colorFanPage2}{HTML}{7C7F80}%{8D9294}%{A4A4A4} %body text page first
+
+
+
+\lstset{ %
+	backgroundcolor=\color{colBack},   % choose the background color; you must add \usepackage{color} or 
+	basicstyle=\ttfamily\footnotesize,
+	tabsize=2,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{colComments},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	firstnumber=last,
+	linewidth=0.98\linewidth,
+	xleftmargin=10pt,
+	frame=single,	                   % adds a frame around the code
+	keepspaces=true,                % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	%   identifierstyle=\color{colIdentifier},
+	keywordstyle=\color{colKeys},       % keyword style
+	otherkeywords={*,...},            % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny,
+	%   numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	%   stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{colString},     % string literal style
+	tabsize=2	                   % sets default tabsize to 2 spaces
+}
+
+\lstset{literate=
+	{á}{<!---->{\'a}<!---->}1 {é}{<!---->{\'e}<!---->}1 {í}{<!---->{\'i}<!---->}1 {ó}{<!---->{\'o}<!---->}1 {ú}{<!---->{\'u}<!---->}1
+	{Á}{<!---->{\'A}<!---->}1 {É}{<!---->{\'E}<!---->}1 {Í}{<!---->{\'I}<!---->}1 {Ó}{<!---->{\'O}<!---->}1 {Ú}{<!---->{\'U}<!---->}1
+	{à}{<!---->{\`a}<!---->}1 {è}{<!---->{\`e}<!---->}1 {ì}{<!---->{\`i}<!---->}1 {ò}{<!---->{\`o}<!---->}1 {ù}{<!---->{\`u}<!---->}1
+	{À}{<!---->{\`A}<!---->}1 {È}{<!---->{\'E}<!---->}1 {Ì}{<!---->{\`I}<!---->}1 {Ò}{<!---->{\`O}<!---->}1 {Ù}{<!---->{\`U}<!---->}1
+	{ä}{<!---->{\"a}<!---->}1 {ë}{<!---->{\"e}<!---->}1 {ï}{<!---->{\"i}<!---->}1 {ö}{<!---->{\"o}<!---->}1 {ü}{<!---->{\"u}<!---->}1
+	{Ä}{<!---->{\"A}<!---->}1 {Ë}{<!---->{\"E}<!---->}1 {Ï}{<!---->{\"I}<!---->}1 {Ö}{<!---->{\"O}<!---->}1 {Ü}{<!---->{\"U}<!---->}1
+	{â}{<!---->{\^a}<!---->}1 {ê}{<!---->{\^e}<!---->}1 {î}{<!---->{\^i}<!---->}1 {ô}{<!---->{\^o}<!---->}1 {û}{<!---->{\^u}<!---->}1
+	{Â}{<!---->{\^A}<!---->}1 {Ê}{<!---->{\^E}<!---->}1 {Î}{<!---->{\^I}<!---->}1 {Ô}{<!---->{\^O}<!---->}1 {Û}{<!---->{\^U}<!---->}1
+	{œ}{<!---->{\oe}<!---->}1 {Œ}{<!---->{\OE}<!---->}1 {æ}{<!---->{\ae}<!---->}1 {Æ}{<!---->{\AE}<!---->}1 {ß}{<!---->{\ss}<!---->}1
+	{ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+	{ç}{<!---->{\c c}<!---->}1 {Ç}{<!---->{\c C}<!---->}1 {ø}{<!---->{\o}<!---->}1 {å}{<!---->{\r a}<!---->}1 {Å}{<!---->{\r A}<!---->}1
+	{€}{<!---->{\EUR}<!---->}1 {£}{<!---->{\pounds}<!---->}1
+}
+
+
+\lstdefinestyle{shell}{language=csh}
+\lstdefinestyle{php}{language=php}
+\lstdefinestyle{ansic}{language=c}
+\lstdefinestyle{java}{language=java}
+\lstdefinestyle{matlab}{language=matlab}
+\lstdefinestyle{python}{language=python}
+\newcommand{\includecode}[2][c]{\lstinputlisting[escapechar=,style=#1,caption=]{#2}}
+\newcommand{\java}{\lstset{language=java}}
+\newcommand{\ansic}{\lstset{language=c}}
+\newcommand{\php}{\lstset{language=php}}
+\newcommand{\shell}{\lstset{language=csh}}
+\renewcommand{\lstlistingname}{Código}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%% BRUNO MACIEL
+
+\DefineNamedColor{named}{cinred}    {rgb}{0.6,0.2,0.2}
+\DefineNamedColor{named}{cingray}   {rgb}{0.4,0.4,0.4}
+\DefineNamedColor{named}{darkgray}   {cmyk}{0,0,0,0.90}
+
+
+% \setbeamercolor{alerted text}{fg=green!80!yellow}
+% \setbeamercolor*{palette primary}{bg=cinred,fg=white}
+% \setbeamercolor*{palette secondary}{fg=white,bg=cingray}
+% \setbeamercolor*{palette tertiary}{fg=white,bg=darkgray}
+% \setbeamercolor*{palette quaternary}{fg=white,bg=yellow}
+% \setbeamercolor*{structure}{fg=cinred,bg=white}
+
+\setbeamercolor{frametitle}{bg=white,fg=cinColor}
+
+
+\usecolortheme[named=darkgray]{structure}
+
+\setbeamercolor{block title}{fg = white, bg = cinColor}
+\setbeamercolor{block body}{bg = cinColor!15!white}
+\setbeamercolor{block title alerted}{bg = AlTitle}
+\setbeamercolor{block body alerted}{bg = AlBody!5!white}
+\setbeamercolor{block title example}{bg = ExTitle}
+\setbeamercolor{block body example}{bg = ExTitle!15!white}
+\setbeamertemplate{blocks}[rounded]
+
+\setbeamercolor{footer number page}{fg = white, bg = cinColor}
+
+\setbeamercolor{button}{fg = white, bg = cinColor}
+
+
+%%%%%%%%%5 background
+
+%\pgfdeclareimage[height=\paperheight,width=\paperwidth]{myimage}{images/gb.png}
+
+%\usebackgroundtemplate{\tikz\node[opacity=0.7] {\pgfuseimage{myimage}};}
+
+
+
+%---------------------------------------------------------------------
+%
+% tipo de numeração das com allowframebreaks
+%
+%---------------------------------------------------------------------
+
+\setbeamertemplate{frametitle continuation}{\insertcontinuationcount}
+%
+%
+%---------------------------------------------------------------------
+
+
+
+
+\usebackgroundtemplate{
+	% \begin{picture}(0,273)
+	%   %\pgfuseimage{myimage}
+	% \end{picture}    
+	{\color{cinColor}\rule{3pt}{\paperheight}\hspace*{\dimexpr\paperwidth-6pt\relax}\rule{10pt}{\paperheight}}%   
+	%\vbox{\hspace{9mm}\includegraphics[width=9mm,height=9mm]{\figuralogo}}
+	%    \vbox{\includegraphics[width=9mm,height=9mm]{\figuralogo}}
+	%\raisebox{-\height}{\includegraphics[width=9mm,height=9mm]{\figuralogo}}
+	%    \IfFileExists{\figuralogo}{\begin{tikzpicture}[remember picture,overlay]
+	%    \node[anchor=north west,yshift=-3mm,xshift=3mm] at (current page.north west) {
+	%    \includegraphics[width=9mm,height=9mm]{\figuralogo}};
+	%    \end{tikzpicture}}{}
+}%
+
+
+% \addtobeamertemplate{frametitle}{}{%
+% \begin{tikzpicture}[remember picture,overlay]
+% \node[anchor=north east,yshift=2pt] at (current page.north east) {
+% \includegraphics[height=60mm]{images/fig-jn.jpg}};
+% \end{tikzpicture}}
+
+% \hspace*{\paperwidth}\makebox[0pt][r]{\includegraphics[width=60mm]{images/fig-jn.jpg}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\halfmargin}{0.05\paperwidth}
+\newcommand{\margin}{0.05\paperwidth}
+
+\beamersetrightmargin{\margin}
+\beamersetleftmargin{\margin}
+
+
+%\setbeamertemplate{headline}{\vspace{1cm}}
+
+
+% \newcommand\Wider[2][3em]{%
+% \makebox[\linewidth][c]{%
+%   \begin{minipage}{\dimexpr\textwidth+#1\relax}
+%   \raggedright#2
+%   \end{minipage}%
+%   }%
+% }
+
+
+%%%%%%%%%%%%%%%%
+
+
+% \setcounter{page}{1} 
+% \pagenumbering{arabic} 
+
+%
+
+
+\setbeamertemplate{frametitle}{
+	\ifbeamercolorempty[bg]{frametitle}{}{\nointerlineskip}%
+	%	\begin{beamercolorbox}[left,wd=0.5\textwidth]{frametitle}
+	%		\hspace{-4mm}\vspace{-8mm}\includegraphics[width=9mm,height=9mm]{\figuralogo}
+	%	\end{beamercolorbox}%
+	\begin{beamercolorbox}[left,leftskip=-3mm,wd=0.95\textwidth,dp=1mm]{frametitle}
+		\usebeamerfont{frametitle}
+		\vspace*{-1\topskip plus 1fill}%\vspace{-4mm}
+		\nolinebreak\vbox{\fontsize{14pt}{9.2}\selectfont \textbf{\insertframetitle}}
+		\vspace*{\fill}    
+	\end{beamercolorbox}%
+	%\strut\par{} 
+	%\vskip-1ex
+	%\vskip-.3cm
+}
+
+
+% \setbeamertemplate{frametitle}{
+%     \vspace{0.5cm}\hspace*{0.5cm}\textcolor{fontColor}{\textbf{\insertframetitle}}
+% }
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\makeatletter
+
+% \setbeamertemplate{footline}{} % no page number here
+% \frame{
+%   \titlepage
+%   \note{These are slides for a talk I will give on 24 Oct 2013, at a
+%     symposium on open access publishing, organized by the Ebling
+%     Library, UWMadison.}
+% }
+
+% \setbeamertemplate{footline}{%
+%     \raisebox{5pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\color{gray}
+%           \scriptsize\insertframenumber}}}\hspace*{5pt}}
+
+
+\addtobeamertemplate{note page}{\setlength{\parskip}{12pt}}
+
+\newcommand{\bi}{\begin{itemize}}
+	\newcommand{\ei}{\end{itemize}}
+\newcommand{\ig}{\includegraphics}
+\newcommand{\subt}[1]{{\footnotesize \color{subtitle} {#1}}}
+
+
+
+\setbeamertemplate{footline}{} % no page number here
+
+
+\makeatother
+
+
+%%%%%%%%%%%%%%%%
+
+
+
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}
+{\vfill}
+{\vskip\itemsep\vspace{1pt}}
+{}
+{}
+\makeatother  
+
+
+
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% sumário
+%
+
+\setbeamercolor{author}{fg=darkgray}
+\setbeamercolor{date}{fg=darkgray}
+\setbeamercolor{institute}{fg=darkgray}
+\setbeamercolor{footline}{fg=darkgray}
+
+\setbeamerfont{section in toc}{size=\fontsize{10}{15}\selectfont}
+% \setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+%\setbeamertemplate{section in toc}[sections numbered]
+
+\defbeamertemplate{section in toc}{mysections numbered}
+{\leavevmode\parbox[t]{2em}{\inserttocsectionnumber.}\parbox[t]{\dimexpr\textwidth-2em\relax}{\inserttocsection}\par}
+\setbeamertemplate{section in toc}[mysections numbered]
+
+
+\setbeamerfont{section number projected}{%
+	family=\rmfamily,series=\bfseries,size=\fontsize{10}{12.2}\selectfont}
+%\setbeamercolor{section number projected}{bg=black,fg=yellow}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatother  
+
+
+
+
+
+
+
+\makeatletter
+
+%%%%
+%
+% CAPA - APRESENTAÇÃO
+%
+\newcommand\titlegraphicii[1]{\def\inserttitlegraphicii{#1}}
+\titlegraphicii{}
+\setbeamertemplate{title page}
+{
+	\begin{beamercolorbox}[center,wd=\paperwidth,dp=4mm]{institute}
+		\usebeamerfont{institute}\instituicao\\\nomecurso %\\\programa
+	\end{beamercolorbox}
+	\begin{beamercolorbox}[sep=0pt,center,wd=.9\paperwidth,dp=2mm]{title}
+		\usebeamerfont{title}\fontsize{14}{9.2}\selectfont{\titulo}\par%
+		\vspace{3mm}\disciplina\\\vspace{3mm}\autor\\\vspace*{0.5cm}   
+	\end{beamercolorbox}%
+	\vspace{\fill}\vfill
+	\IfFileExists{\figuralogocapa}{
+		\begin{center}
+			\includegraphics[width=50mm]{\figuralogocapa}
+		\end{center}
+	}{}
+	\begin{beamercolorbox}[sep=0pt,center,wd=.9\paperwidth]{date}
+		\vskip 4mm
+		\usebeamerfont{date}
+		\data
+		{\vskip 1mm \color{gray}\hrule height 0.5mm}
+	\end{beamercolorbox}%\vskip0.5em
+}
+\makeatother
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%% sumário
+
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+\setbeamertemplate{subsubsection in toc}[subsubsections numbered]
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Outline}
+		\tableofcontents[currentsection]%,currentsubsection, currentsubsubsection]
+	\end{frame}
+}
+
+\setbeamercolor{section in toc}{fg=darkgray}
+\setbeamercolor{subsection in toc}{fg=darkgray}
+\setbeamercolor{subsubsection in toc}{fg=darkgray}
+
+
+
+
+% \setbeamerfont{section in toc}{size=\huge}
+
+% \setbeamerfont{subsection in toc}{size=\LARGE}
+
+% \setbeamerfont{subsubsection in toc}{size=\large}
+
+
+
+%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%remover slides de seções
+
+% \AtBeginSection{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\defbeamertemplate*{section page}{ifttheme}%[1][]
+{\vbox{}\vskip-3.2cm%
+	\begin{beamercolorbox}[sep=0.3cm,ht=0.5\paperheight,wd=\paperwidth]{red}
+		\begin{center}
+			\begin{minipage}[c]{0.55\paperwidth}
+				\centering\insertsection%\par
+			\end{minipage}
+		\end{center}
+	\end{beamercolorbox}
+}
+
+\AtBeginSection[]{\frame{\sectionpage}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Tela cheia
+\hypersetup{pdfpagemode=FullScreen}
+
+% Layout da pagina
+\hypersetup{pdfpagelayout=SinglePage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% % Add support for \subsubsectionpage
+% \def\subsubsectionname{\translate{Subsubsection}}
+% \def\insertsubsubsectionnumber{\arabic{subsubsection}}
+% \setbeamertemplate{subsubsection page}
+% {
+%   \begin{centering}
+%     {\usebeamerfont{subsubsection name}\usebeamercolor[fg]{subsubsection name}\subsubsectionname~\insertsubsubsectionnumber}
+%     \vskip1em\par
+%     \begin{beamercolorbox}[sep=4pt,center]{part title}
+%       \usebeamerfont{subsubsection title}\insertsubsubsection\par
+%     \end{beamercolorbox}
+%   \end{centering}
+% }
+% \def\subsubsectionpage{\usebeamertemplate*{subsubsection page}}
+
+
+\AtBeginSection{\frame{\sectionpage}}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+
+
+% \AtBeginSubsubsection{\frame{
+
+% \strut\textcolor{cinColor}{\fontsize{17pt}{9.2}\selectfont \parbox{0.7\linewidth}{\textbf{\subsubsectionpage}} } \strut\par{}
+% %\subsubsectionpage
+% }}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\setbeamertemplate{section page}
+{
+	% \begin{centering}
+	\begingroup
+	\begin{beamercolorbox}[sep=12pt,center]{section title}
+		\usebeamerfont{section title}
+		\strut\textcolor{cinColor}{
+			\fontsize{17pt}{9.2}\selectfont{
+				\textbf{\insertsection}
+			}
+		} 
+		\par
+	\end{beamercolorbox}
+	\endgroup
+	% \end{centering}    
+}
+
+
+\setbeamertemplate{subsection page}
+{
+	% \begin{centering}
+	\begingroup
+	\begin{beamercolorbox}[sep=12pt,center]{section title}
+		\usebeamerfont{section title}
+		
+		\strut\textcolor{cinColor}{\fontsize{17pt}{9.2}\selectfont {\textbf{\insertsection}} } 
+		\par
+	\end{beamercolorbox}
+	%\vspace*{10pt}
+	\begin{beamercolorbox}[sep=8pt,center]{subsection title}
+		\usebeamerfont{subsection title}
+		
+		\strut\textcolor{cinColor}{\fontsize{14pt}{9.2}\selectfont {\textbf{\insertsubsection}} } \strut
+		\par
+	\end{beamercolorbox}
+	\endgroup
+	% \end{centering}    
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% barra de progresso
+%
+\makeatletter
+\def\progressbar@progressbar{} % the progress bar
+\newcount\progressbar@tmpcounta% auxiliary counter
+\newcount\progressbar@tmpcountb% auxiliary counter
+\newdimen\progressbar@pbht %progressbar height
+\newdimen\progressbar@pbwd %progressbar width
+\newdimen\progressbar@tmpdim % auxiliary dimension
+
+\progressbar@pbwd=.988\paperwidth %.983
+\progressbar@pbht=0.3pt
+
+\def\progressbar@progressbar{%
+	
+	\progressbar@tmpcounta=\insertframenumber
+	\progressbar@tmpcountb=\inserttotalframenumber
+	% \advance\progressbar@tmpcounta by -1
+	% \advance\progressbar@tmpcountb by -1
+	\progressbar@tmpdim=\progressbar@pbwd
+	
+	\divide\progressbar@tmpdim by 100
+	\multiply\progressbar@tmpdim by \progressbar@tmpcounta
+	\divide\progressbar@tmpdim by \progressbar@tmpcountb
+	\multiply\progressbar@tmpdim by 100
+	
+	% \multiply\progressbar@tmpdim by \progressbar@tmpcounta
+	% \divide\progressbar@tmpdim by \progressbar@tmpcountb
+	
+	\begin{tikzpicture}[very thin]
+	\shade[draw=red,top color=red!10,bottom color=red!10,middle color=red] %
+	(0pt, 0pt) rectangle ++ (\progressbar@tmpdim, \progressbar@pbht);
+	\end{tikzpicture}%
+}
+
+
+
+% \addtobeamertemplate{frametitle}{}
+% {%
+%   \begin{beamercolorbox}[wd=\paperwidth,ht=1pt,dp=1pt]{}%
+%     \progressbar@progressbar%
+%   \end{beamercolorbox}%
+% }%
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%% numeração das páginas
+
+\makeatletter
+\setbeamertemplate{footline}{%
+	\leavevmode{
+		\hbox{%
+			\begin{beamercolorbox}[wd=.70\paperwidth,ht=0mm,left,leftskip=1mm]{title in head/foot}%
+				\color{gray}\hspace{1mm}\insertpart
+			\end{beamercolorbox}%
+			\begin{beamercolorbox}[wd=.30\paperwidth,ht=0mm,right]{title in head/foot}%
+				\siteprograma~~
+			\end{beamercolorbox}%
+		} \vskip.4\baselineskip
+		\hbox{%
+			\begin{beamercolorbox}[wd=.96\paperwidth,ht=0ex,left,leftskip=1mm,rightskip=1mm]{title in head/foot}%
+				\rule{0.988\textwidth}{.4pt}
+			\end{beamercolorbox}%
+		}\vskip.1\baselineskip
+		\hbox{%
+			\begin{beamercolorbox}[wd=.98\paperwidth,ht=0mm,left,leftskip=1mm,rightskip=1mm]{title in head/foot}%
+				\progressbar@progressbar
+				% \vskip-.5\baselineskip
+			\end{beamercolorbox}%
+		}\vskip.1\baselineskip
+		\hbox{%
+			\begin{beamercolorbox}[wd=.70\paperwidth,ht=0mm,left,leftskip=2ex]{title in head/foot}%
+				\usebeamerfont{title in head/foot}\insertshorttitle ~-- \autor\hspace{1mm} \url{https://github.com/brunom4ciel/material-python} \vfil
+			\end{beamercolorbox}%
+			\begin{beamercolorbox}[wd=.2\paperwidth,ht=0mm,center]{date in head/foot}%
+				\usebeamerfont{date in head/foot}\data\vfil
+			\end{beamercolorbox}%
+			\begin{beamercolorbox}[wd=.1\paperwidth,ht=4mm,center]{footer number page}%
+				\fontsize{10pt}{1}\selectfont{\insertframenumber{}|\inserttotalframenumber}
+			\end{beamercolorbox}
+		}%
+}}
+% \author{Author}
+\title{\titulo}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%espaço entre parágrafos
+
+\usepackage{parskip}
+\setlength{\parskip}{\smallskipamount} 
+
+
+
+
+
+
+
+
+\makeatletter
+\pretocmd{\blx@env@bibliography}
+{\settowidth{\labelnumberwidth}{\usebeamertemplate{bibliography item}}%
+	\settowidth{\labelalphawidth}{\usebeamertemplate{bibliography item}}}{}{}
+\makeatother
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% para colocar o menu de navegação entre seções no cabeçalho
+%
+% \setbeamercolor{button}{bg=cinColor,fg=white}
+
+\setbeamertemplate{headline}{%
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.85\paperwidth,ht=2.8mm,dp=1mm]{palette quaternary}%
+			\insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll} 
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.06\paperwidth,ht=2.8mm,dp=1mm,right]{}%
+			%		\includegraphics[width=10mm]{imagens/fig-dmca-badge-w100-5x1-08.png}fig-dmca-badge-w250-5x1-02.png
+			\IfFileExists{\figuradmca}{\includegraphics[width=15mm]{\figuradmca}}{}
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.09\paperwidth,ht=2.8mm,dp=1mm,right]{cinColor}%
+			\hskip0pt \hyperlink{summary}{\beamerbutton{Sumário}}%\hspace{1mm}
+		\end{beamercolorbox}%
+		
+	}
+}
+% \hskip1pt \hyperlink{summary}{\beamerbutton{Início}}\hspace{2mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\definecolor{arylideyellow}{rgb}{0.91, 0.84, 0.42}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{bluepigment}{rgb}{0.2, 0.2, 0.6}
+\definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+
+\setbeamercolor{warning}{fg=black,bg=arylideyellow}
+\setbeamercolor{info}{fg=black,bg=babyblueeyes}
+\setbeamercolor{infotitle}{fg=aliceblue,bg=bluepigment}
+
+
+
+
+%%%%%%%%%%%%%%%%
+% PART
+%%%%%%%%%%%%%
+
+
+% \makeatletter
+% \setbeamertemplate{part page}[default][colsep=-4bp,rounded=true,
+%   shadow=\beamer@themerounded@shadow,wd=0.4\textwidth]
+% \makeatother
+
+
+
+\defbeamertemplate*{part page}{my part}[1][]
+{
+	
+	\begin{centering}
+		% {\usebeamerfont{part name}\usebeamercolor[fg]{part name}
+		%  \insertpart~\insertromanpartnumber
+		% }
+		%  \settowidth{\textwidth}{\insertpart}% set the length matching to the title
+		%  \addtolength{\gnat}{4em}% raise the length  a bit
+		\hfill
+		%now we use that length
+		\begin{beamercolorbox}[center,wd=\textwidth,#1]{part title}
+			\usebeamerfont{part title}\insertpart\par
+		\end{beamercolorbox}
+		\hfill
+	\end{centering}
+}
+
+
+
+
+
+
+
+
+
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsection}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsubsection}
+
+
+
+\makeatletter
+
+% \renewlist{itemize}{itemize}{6}
+% \setlist[itemize]{label=\beamerItemCInUFPE, labelsep=2pt, leftmargin=2em}
+% \setlist[itemize, 1]{leftmargin=1.2em ,itemsep=3pt,topsep=3pt}
+
+% \renewlist{enumerate}{enumerate}{6}
+% \setlist[enumerate]{label={\protect\beamerEnumerateCInUFPE{\arabic*}},labelsep=2pt, leftmargin=2em}
+% \setlist[enumerate, 1]{leftmargin=1.2em}
+
+\setlist[enumerate]{label*=\arabic*., listparindent=21pt, font=\selectfont, before*=\selectfont, leftmargin=1.2em,itemsep=1mm }
+
+\setlist[itemize]{before*=\selectfont,leftmargin=1.2em,itemsep=1mm}
+\setlist[itemize,1]{before*=\selectfont,leftmargin=1.2em,itemsep=1mm}
+\setlist[itemize,2]{before*=\selectfont,leftmargin=1.2em,topsep=3pt,itemsep=1mm}
+\setlist[itemize,3]{before*=\selectfont,leftmargin=1.2em,topsep=3pt,itemsep=1mm}
+
+\setbeamertemplate{itemize items}{\color{cinColor}$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\color{cinColor}$\blacktriangleright$}
+
+\setbeamertemplate{enumerate items}{\color{cinColor}$\blacksquare$}
+\setbeamertemplate{enumerate subitem}{\color{cinColor}$\blacktriangleright$}
+
+% \setbeamercolor*{enumerate item}{fg=cinColor}
+% \setbeamercolor*{enumerate subitem}{fg=cinColor}
+% \setbeamercolor*{enumerate subsubitem}{fg=cinColor}
+
+\setitemize{label=\usebeamerfont*{itemize item} 
+	\usebeamercolor[fg]{itemize item} \usebeamertemplate{itemize item}}
+
+
+\AtBeginPart{
+	\write\@auxout{%
+		\noexpand\expandafter\noexpand\gdef\noexpand\csname
+		part\thepart name\noexpand\endcsname{\beamer@partname}}
+}
+\@addtoreset{section}{part}
+\makeatother
+
+
+
+
+% \setbeamertemplate{button}{\tikz
+%   \node[
+%   inner xsep=10pt,
+%   draw=structure!80,
+%   fill=structure!50,
+%   rounded corners=4pt]  {\Large\insertbuttontext};
+% }
+
+
+%\hypersetup{colorlinks=true,urlcolor=cyan,linkbordercolor=blue,pdfborderstyle={/S/U/W 1},linkcolor=blue}
+
+
+\hypersetup{colorlinks=true,
+	urlcolor=cyan,
+	linkbordercolor=blue,
+	pdfborderstyle={/S/D/D[3 2]/W 1},
+	linkcolor=blue
+}
+
+% \renewcommand{\beamergotobutton}[1]{%
+%     \begingroup% keep color changes local
+%     % \setbeamercolor{button}{fg=black,bg=red}%
+%     % \beamerbutton{\insertreturnsymbol#1}% original definition
+%     \tikz
+%       \node[
+%       inner xsep=10pt,
+%       draw=structure!80,
+%       fill=cinColor!20,
+%       rounded corners=4pt]  {\Large\insertgotosymbol#1};
+%     \endgroup
+% }
+
+\renewcommand{\beamergotobutton}[1]{%
+	\begingroup% keep color changes local
+	% \setbeamercolor{button}{fg=black,bg=red}%
+	\setbeamerfont{button}{size=\Large}
+	\beamerbutton{\insertgotosymbol#1}% original definition
+	\endgroup
+}
+% \fontsize{12}{10}\selectfont
+
+
+\newcommand{\myhyperlink}[2]{\hyperlink{#1}{\fontsize{12}{10}\selectfont\color{blue}\underline{#2}}} 
+
+% \expandafter\csname c@part\x \endcsname
+% \expandafter\def\csname thepart\x \endcsname
+
+
+%\makeatletter
+%% \renewcommand{\p@chapter}{\maybe@part{\thepart.}}
+%\newcommand{\pcref}[1]{\begingroup\let\maybe@part\@iden\ref{#1}\endgroup}
+%\protected\def\maybe@part#1{}
+%\makeatother
+
+\makeatletter
+\newcommand*\TableOfContents {%
+	\foreach\x in {0,...,\inputFilesMaxValue}{%
+		\@ifundefined{r@part:\x}{   			
+		}{
+			\medskip\expandafter\let\expandafter\partname
+			\csname part\x name\endcsname
+			\penalty-999
+			\ref{part:\x}\hspace*{2mm}\myhyperlink{part:\x}{\partname}\dotfill\pageref{part:\x}
+			%  \myhyperlink{part:\x}{\beamergotobutton{\partname}}
+			\medskip  
+			% 		 {\let\vfill=\relax\fontsize{10}{10}\selectfont\tableofcontents[part=\x]}
+			\vfill
+			\penalty-999
+		}
+	}%
+}
+\makeatother
+% \href{}{\beamergotobutton{}}\insertgotosymbol
+

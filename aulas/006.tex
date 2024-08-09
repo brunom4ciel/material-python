@@ -1,0 +1,417 @@
+\pgfplotstablegetelem{\thepart}{[index]\columnIndex}\of{\cronograma}
+\part{\pgfplotsretval}
+\label{part:\thepart}
+\frame{\partpage}
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		
+		...São soluções típicas para problemas comuns em projeto de software.
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item {\color{red}Reusabilidade de Software.}
+			\item {\color{red}Conceitos e uso de SOLID.}
+			\item Conceitos básicos de Padrões de Projeto.
+			\item Padrões de Criação.
+			\item Padrões Estruturais.
+			\item Padrões Comportamentais.
+			\item Padrões Arquiteturais(MVC).
+			
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	
+\end{frame}
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{14pt}{15.2}\selectfont{
+		
+		Reúso de software é o processo de incorporar produtos existentes em um novo produto.
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Código.
+			\item specificações de Requisitos e Projeto.
+			\item Planos de Teste.
+			\item Conhecimento.
+						
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{14pt}{15.2}\selectfont{
+		Benefícios
+		
+	}\par
+	\vspace{1em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Aumento da Produtividade.
+			\item Diminuição do tempo de desenvolvimento e validação -> Redução	de custo.
+			\item Qualidade dos Produtos.
+			\item Flexibilidade na estrutura do software.
+			\item Manutenibilidade.
+			\item Familiaridade com o uso de padrões -> leva a menos erros.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{14pt}{15.2}\selectfont{
+		Dificuldades
+		
+	}\par
+	\vspace{1em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Identificação e compreensão dos artefatos.
+			\item Qualidade dos artefatos.
+			\item Modificação dos artefatos.
+			\item Falta de confiança nos “artefatos dos outros”. Mito: “não inventado aqui.”.
+			\item Ferramentas de apoio.
+			\item Aspectos legais e econômicos.
+			\item Falta de incentivo.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{14pt}{15.2}\selectfont{
+		Requisitos
+		
+	}\par
+	\vspace{1em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Catalogação, documentação e certificação completa do artefato a
+			ser reutilizado, de modo a ser possível:
+			 
+			\begin{itemize}%[<+->]		
+				\item Encontrar o artefato a ser reutilizado.
+				\item Compreender o artefato para adaptá-lo ao novo contexto.
+				\item Garantir que o artefato se comportará conforme especificado.
+				
+			\end{itemize}
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{14pt}{15.2}\selectfont{
+		Uma boa técnica de reúso deve garantir adaptação e adequação a um novo contexto:
+		
+	}\par
+	\vspace{1em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Abstração.
+			\item Seleção.
+			\item Especialização.
+			\item Integração.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{14pt}{15.2}\selectfont{
+		Técnicas para Reúso.
+		
+	}\par
+	\vspace{1em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Bibliotecas.
+			\item Frameworks.
+			\item Componentes.
+			\item Padrões de Software.
+			\item Linhas de Produto de Software.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\vspace{7em}
+	\centering
+	\fontsize{46pt}{15.2}\selectfont{
+		
+		Princípios de projetos S.O.L.I.D.
+		
+	}\par
+	\vspace{1em}
+		
+	
+\end{frame}
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		
+		SOLID - são cinco princípios de design de \textbf{código orientado a objeto} que basicamente tem os seguintes objetivos.
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Tornar o código mais entendível, claro e conciso.
+			\item Tornar o código mais flexível e tolerante a mudanças.
+			\item Aumentar a adesão do código aos princípios da orientação a objetos.
+			
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		
+		SOLID é um acrônimo para cada um dos cinco princípios que fazem parte desse grupo:
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item \textit{Single Responsability Principle} (Princípio da Responsabilidade Única).
+			\item \textit{Open/Closed Principle} (Princípio do “Aberto para Extensão/Fechado para Implementação).
+			\item \textit{Liskov Substitution Principle} (Princípio da Substituição de Liskov).
+			\item \textit{Interface Segregation Principle} (Princípio da Segregação de Interfaces).
+			\item \textit{Dependency Inversion Principle} (Princípio da Inversão de Dependências).
+			
+			
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{14pt}{15.2}\selectfont{		
+		\textit{Single Responsability Principle} (Princípio da Responsabilidade Única).
+	}\par
+	\vspace{1em}	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Uma classe deve ter UM, e somente um, MOTIVO para mudar.
+			\item Alterações causam “incerteza”
+			\begin{itemize}%[<+->]  
+				\item Cada linha modiﬁcada pode introduzir BUG novo.
+				\item Diminui a coesão e aumenta acoplamento.
+			\end{itemize}
+			\item É o padrão “base”.
+			\item Anti-padrões: Classe Deus/Grande bola de lama/etc.
+		
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{14pt}{15.2}\selectfont{		
+		\textit{Open/Closed Principle} (Princípio do “Aberto para Extensão/Fechado para Implementação).
+	}\par
+	\vspace{1em}	
+	
+	\fontsize{11pt}{13}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Objetos e/ou classes devem estar abertos para extensão, mas
+			fechados para modiﬁcação.
+			\begin{itemize}%[<+->]  
+				\item É possível incluir novas funcionalidades.
+			\end{itemize}
+			\item Alterações causam “incerteza” (de novo).
+			\item Abstração é a chave
+			\item Utilização de bom encapsulamento.
+			\begin{itemize}%[<+->]  
+				\item Atributos sempre privados.
+				\item Uso de polimorﬁsmo: criação de interfaces/classes abstratas.
+				\item Jamais usar variáveis globais ou “similares”.
+			\end{itemize}
+			\item Anti-padrões: código espaguete.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{14pt}{15.2}\selectfont{		
+		\textit{Liskov Substitution Principle} (Princípio da Substituição de Liskov).
+	}\par
+	\vspace{1em}	
+	
+	\fontsize{11pt}{13}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Uma classe derivada deve ser substituível pela sua classe base.
+			\begin{itemize}%[<+->]  
+				\item “Se para cada objeto o1 do tipo S há um objeto o2 do tipo T de forma que, para todos os
+				programas P deﬁnidos em termos de T, o comportamento de P é inalterado quando o1 é
+				substituído por o2 então S é um subtipo de T.
+			\end{itemize}
+			\item Utilização de poliformismo adequado.
+			\begin{itemize}%[<+->]  
+				\item A validade do modelo depende de seus ﬁlhos.
+				\item Relacionamento IS-A ligado ao comportamento.
+				\begin{itemize}%[<+->]  
+					\item Problemas em CASTs.
+				\end{itemize}
+			\end{itemize}
+			\item Pode ser relacionado com “Design por contrato”.
+			\begin{itemize}%[<+->]  
+				\item Pré condições e pós condições na execução.	
+			\end{itemize}
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{14pt}{15.2}\selectfont{		
+		\textit{Interface Segregation Principle} (Princípio da Segregação de Interfaces).
+	}\par
+	\vspace{1em}	
+	
+	\fontsize{13pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Classe não implementa interface com métodos que não vai usar.
+			\item Evitar poluição da interface -> baixo acoplamento.
+			\item Anti-padrão: interface “Deus”/martelo de ouro.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Padrões de Desenvolvimento de Software}
+	
+	\fontsize{14pt}{15.2}\selectfont{		
+		\textit{Dependency Inversion Principle} (Princípio da Inversão de Dependências).
+	}\par
+	\vspace{1em}	
+	
+	\fontsize{13pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Módulos de alto nível não devem depender de módulos de baixo nível.
+			Ambos devem depender de abstrações.
+			\item Abstrações não devem depender de detalhes. Detalhes (implementações)
+			devem depender de abstrações.
+			\item Utilização constante de polimorﬁsmo.
+				\begin{itemize}%[<+->]  
+					\item Facilita a reutilização.
+				\end{itemize}
+			\item Anti-padrão: complexidade “acidental”/gambiarra/copiar-colar.
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+

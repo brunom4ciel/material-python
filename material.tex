@@ -1,0 +1,175 @@
+% 2017-01-27 - Bruno Iran Ferreira Maciel - bifm@cin.ufpe.br
+\documentclass[xcolor=table,smaller,aspectratio=169]{beamer}
+
+% ----------------------------------------------------------
+% Customização p/ o estilo bifm
+% ----------------------------------------------------------
+\usepackage{bifm}
+
+% ----------------------------------------------------------
+% Configura parâmetros p/ o estilo bifm
+% ----------------------------------------------------------
+\input{configuracao}
+
+%
+% ----------------------------------------------------------
+% GLOSSÁRIO
+% ----------------------------------------------------------
+\input{glossario}
+
+%
+% ----------------------------------------------------------
+% ACRÔNIMO
+% ----------------------------------------------------------
+% \makeglossaries
+\input{acronimos}
+%\makeindex
+
+
+\begin{document}
+	
+	
+	
+	% ----------------------------------------------------------
+	% CAPA
+	% ----------------------------------------------------------
+	{\setbeamertemplate{footline}{} 
+		\begin{frame}[c,t]
+			\maketitle
+	\end{frame}}
+	
+	
+	
+	% ----------------------------------------------------------
+	% SUMÁRIO
+	% ----------------------------------------------------------
+	\addtocounter{framenumber}{-2}
+	\setbeamerfont{section in toc}{size=\tiny}
+	\setlength{\columnsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parindent}{0pt}
+	{
+		\setbeamertemplate{footline}{} 
+		% \setbeamertemplate{section in toc}[circle]
+		% remova as linhas abaixo se desejar colocar um sumário de todas as seções
+		\begin{frame}[t,label=summary]{Estrutura de Tópicos das Aulas}
+			% \vspace*{0.5cm}
+			% \hspace*{0.5cm}
+			\centering
+			%\scalebox{0.8}{
+			\resizebox*{0.99\textwidth}{!}{
+				% \resizebox{0.99\textwidth}{0.8\textheight}{
+				% \resizebox{0.99\textwidth}{\dimexpr\textheight-5\baselineskip\relax}{
+				%\begin{adjustbox}{max width=\textwidth,max totalheight=\textheight,keepaspectratio}
+				%  \begin{minipage}[t][0.5\paperheight][t]{1\paperwidth}
+				\parbox{2.1\linewidth}{\setlength\columnsep{10pt}
+					\begin{multicols}{2}
+						\TableOfContents
+					\end{multicols}
+				}
+				%  \end{minipage}9
+			}
+			%\end{adjustbox}
+		\end{frame}
+	}
+	
+	
+	
+	% ----------------------------------------------------------
+	% para remover slides de seções comente o comando abaixo
+	% ----------------------------------------------------------
+	\AtBeginSection{}
+	
+	
+	
+	% ----------------------------------------------------------
+	% carrega as informações da disciplina
+	% ----------------------------------------------------------
+	\input{informacoes}
+	
+	
+	% ----------------------------------------------------------
+	% ACRÔNIMO
+	% ----------------------------------------------------------
+	{\setbeamertemplate{footline}{} 
+		\begin{frame}[allowframebreaks,noframenumbering,c]{Acrônimo}
+			\vspace{2mm}
+			\fontsize{11.2}{7.2}\selectfont{}
+			\printglossary[type=\acronymtype,title=, toctitle=]
+	\end{frame}}
+	
+	% ----------------------------------------------------------
+	% carrega os slides das aulas
+	% ----------------------------------------------------------
+	\input{slides}
+	
+	
+	% ----------------------------------------------------------
+	% CAPA
+	% ----------------------------------------------------------
+	{\setbeamertemplate{footline}{} 
+		\setbeamertemplate{headline}{
+			\leavevmode%
+			\hbox{%
+				\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+				\end{beamercolorbox}%
+			}
+		}
+		\begin{frame}[c,t]
+			\maketitle
+	\end{frame}}
+	
+	
+	
+	% ----------------------------------------------------------
+	% GLOSSÁRIO
+	% ----------------------------------------------------------
+	\begin{frame}[c,allowframebreaks,noframenumbering]{Exercícios}
+		\justify
+		\printglossary[title=, toctitle=]
+	\end{frame}
+	
+	
+	
+	% ----------------------------------------------------------
+	% REFERÊNCIAS
+	% ----------------------------------------------------------
+	\part{Referências}
+	\frame{\partpage}
+	\nocite{*}
+	{
+		\setbeamertemplate{footline}{} 
+		\setbeamertemplate{headline}{
+			\leavevmode%
+			\hbox{%
+				\begin{beamercolorbox}[wd=\paperwidth,ht=4.5ex,dp=1.125ex]{palette quaternary}%
+				\end{beamercolorbox}%
+			}
+		}
+		\begin{frame}[allowframebreaks,noframenumbering]{Referências}
+			\fontsize{11.2}{7.2}\selectfont{}
+			\bibliographystyle{abbrvnat} %\usepackage{natbib}
+			\bibliography{referencias}
+			% \printbibliography
+		\end{frame}
+	}
+	
+	
+	
+	
+	
+	% ----------------------------------------------------------
+	% incluir ementa dentro do material
+	% ----------------------------------------------------------
+	% \setbeamertemplate{background canvas}{}
+	% \include{plano-aulas}
+	% \includepdf[pages=-,fitpaper]{outros/ementa.pdf}
+	% % noautoscale
+	% % fitpaper
+	% %
+	% %
+	% %*******************************************************
+	
+	
+	
+\end{document}

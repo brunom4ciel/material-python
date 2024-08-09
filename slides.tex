@@ -1,0 +1,3 @@
+\foreach\x in {\inputFilesStartValue,...,\inputFilesMaxValue}{
+    \IfFileExists{aulas/0\x.tex}{\input{aulas/0\x.tex}}{\IfFileExists{aulas/00\x.tex}{\input{aulas/00\x.tex}}{}}
+}
