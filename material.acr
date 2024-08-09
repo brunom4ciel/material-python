@@ -1,7 +1,0 @@
-\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
-\begin{theglossary}\glossaryheader
-\glsgroupheading{P}\relax \glsresetentrylist %
-\glossentry{poo}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{42\delimN 43}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{49}}}%
-\end{theglossary}\glossarypostamble

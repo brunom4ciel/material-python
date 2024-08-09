@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.2)  9 AUG 2024 15:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.2)  9 AUG 2024 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./material.tex
-(material.tex
+**./material-backend-python.tex
+(material-backend-python.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
 (/home/bifm/.miktex/texmfs/install/tex/latex/beamer/beamer.cls
@@ -1608,13 +1608,15 @@ Package: glossary-tree 2024/04/03 v4.54 (NLCT)
 ))
 \glswrite=\write6
 \glo@main@file=\write7
-\openout7 = `material.glo'.
+\openout7 = `material-backend-python.glo'.
 
-Package glossaries Info: Writing glossary file material.glo on input line 39.
+Package glossaries Info: Writing glossary file material-backend-python.glo on i
+nput line 39.
 \glo@acronym@file=\write8
-\openout8 = `material.acn'.
+\openout8 = `material-backend-python.acn'.
 
-Package glossaries Info: Writing glossary file material.acn on input line 39.
+Package glossaries Info: Writing glossary file material-backend-python.acn on i
+nput line 39.
  (/home/bifm/.miktex/texmfs/install/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \CenteringLeftskip=\skip98
@@ -1650,8 +1652,9 @@ LaTeX Font Info:    Trying to load font information for T1+aess on input line 2
 
 (/home/bifm/.miktex/texmfs/install/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
-) (material.aux)
-\openout1 = `material.aux'.
+)
+(material-backend-python.aux)
+\openout1 = `material-backend-python.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
@@ -1729,9 +1732,9 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring ON on input line 29.
 
-(material.out) (material.out)
+(material-backend-python.out) (material-backend-python.out)
 \@outlinefile=\write9
-\openout9 = `material.out'.
+\openout9 = `material-backend-python.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 29.
@@ -1840,7 +1843,7 @@ File: fc-english.def 2016/01/12
 )
 \c@lstlisting=\count475
 
-(material.nav)
+(material-backend-python.nav)
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <5> not available
 (Font)              Font shape `T1/aess/bx/n' tried instead on input line 29.
 
@@ -1878,7 +1881,7 @@ Overfull \hbox (68.28384pt too wide) in paragraph at lines 29--29
 [][]  
  []
 
-<imagens/fig-dmca.png, id=88, 250.9375pt x 50.1875pt>
+<imagens/fig-dmca.png, id=75, 250.9375pt x 50.1875pt>
 File: imagens/fig-dmca.png Graphic file (type png)
 <use imagens/fig-dmca.png>
 Package pdftex.def Info: imagens/fig-dmca.png  used on input line 29.
@@ -1906,7 +1909,7 @@ LaTeX Font Info:    Font shape `T1/aess/b/n' in size <14.4> not available
 (Font)              Font shape `T1/aess/bx/n' tried instead on input line 39.
 LaTeX Font Info:    Font shape `T1/aess/b/n' in size <14> not available
 (Font)              Font shape `T1/aess/bx/n' tried instead on input line 39.
-<imagens/logo-capa.png, id=93, 331.2375pt x 125.46875pt>
+<imagens/logo-capa.png, id=79, 331.2375pt x 125.46875pt>
 File: imagens/logo-capa.png Graphic file (type png)
 <use imagens/logo-capa.png>
 Package pdftex.def Info: imagens/logo-capa.png  used on input line 39.
@@ -1929,7 +1932,7 @@ Overfull \hbox (15.3656pt too wide) has occurred while \output is active
 
 [1{/home/bifm/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}
 
-\openout6 = `material.ist'.
+\openout6 = `material-backend-python.ist'.
 
  <./imagens/fig-dmca.png> <./imagens/logo-capa.png>]
 Overfull \hbox (68.28384pt too wide) in paragraph at lines 73--73
@@ -2043,7 +2046,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 284--284
  [][] 
  []
 
-<imagens/prof-bruno.jpg, id=168, 389.455pt x 436.63126pt>
+<imagens/prof-bruno.jpg, id=147, 389.455pt x 436.63126pt>
 File: imagens/prof-bruno.jpg Graphic file (type jpg)
 <use imagens/prof-bruno.jpg>
 Package pdftex.def Info: imagens/prof-bruno.jpg  used on input line 284.
@@ -2458,6 +2461,11 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 
+Package natbib Warning: Citation `2016:gretan' on page 12 undefined on input li
+ne 498.
+
+
+
 
 Overfull \hbox (68.28384pt too wide) has occurred while \output is active
 [][]  
@@ -2498,12 +2506,8 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 99--99
  [][] 
  []
 
-(material.acr
-LaTeX Font Info:    Font shape `T1/aess/b/n' in size <11.2> not available
-(Font)              Font shape `T1/aess/bx/n' tried instead on input line 6.
-LaTeX Font Info:    Font shape `T1/aess/m/it' in size <11.2> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 6.
-)
+No file material-backend-python.acr.
+
 
 
 Overfull \hbox (68.28384pt too wide) has occurred while \output is active
@@ -2636,7 +2640,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 31--31
  [][] 
  []
 
-<imagens/fig-labirinto.jpg, id=359, 136.5903pt x 118.041pt>
+<imagens/fig-labirinto.jpg, id=310, 136.5903pt x 118.041pt>
 File: imagens/fig-labirinto.jpg Graphic file (type jpg)
 <use imagens/fig-labirinto.jpg>
 Package pdftex.def Info: imagens/fig-labirinto.jpg  used on input line 31.
@@ -2688,7 +2692,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 58--58
  [][] 
  []
 
-<imagens/fig-labirinto2.jpg, id=375, 136.5903pt x 118.041pt>
+<imagens/fig-labirinto2.jpg, id=326, 136.5903pt x 118.041pt>
 File: imagens/fig-labirinto2.jpg Graphic file (type jpg)
 <use imagens/fig-labirinto2.jpg>
 Package pdftex.def Info: imagens/fig-labirinto2.jpg  used on input line 58.
@@ -3736,7 +3740,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 186--186
  [][] 
  []
 
-<imagens/fig-atencao-pessoas-estudando.png, id=774, 718.685pt x 480.79625pt>
+<imagens/fig-atencao-pessoas-estudando.png, id=726, 718.685pt x 480.79625pt>
 File: imagens/fig-atencao-pessoas-estudando.png Graphic file (type png)
 <use imagens/fig-atencao-pessoas-estudando.png>
 Package pdftex.def Info: imagens/fig-atencao-pessoas-estudando.png  used on inp
@@ -4173,7 +4177,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 338--338
  [][] 
  []
 
-<imagens/fig-test-result-sample.png, id=905, 1066.98625pt x 415.5525pt>
+<imagens/fig-test-result-sample.png, id=859, 1066.98625pt x 415.5525pt>
 File: imagens/fig-test-result-sample.png Graphic file (type png)
 <use imagens/fig-test-result-sample.png>
 Package pdftex.def Info: imagens/fig-test-result-sample.png  used on input line
@@ -4226,7 +4230,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 346--346
  [][] 
  []
 
-<imagens/fig-exemplo-resultado-teste-com-coverage-html.png, id=922, 741.77126pt
+<imagens/fig-exemplo-resultado-teste-com-coverage-html.png, id=876, 741.77126pt
  x 586.19pt>
 File: imagens/fig-exemplo-resultado-teste-com-coverage-html.png Graphic file (t
 ype png)
@@ -4496,7 +4500,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 414--414
  [][] 
  []
 
-<imagens/fig-test-result-input.png, id=1006, 585.18625pt x 230.8625pt>
+<imagens/fig-test-result-input.png, id=961, 585.18625pt x 230.8625pt>
 File: imagens/fig-test-result-input.png Graphic file (type png)
 <use imagens/fig-test-result-input.png>
 Package pdftex.def Info: imagens/fig-test-result-input.png  used on input line 
@@ -4647,7 +4651,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 437--437
  [][] 
  []
 
-<imagens/fig-test-result-print.png, id=1054, 585.18625pt x 230.8625pt>
+<imagens/fig-test-result-print.png, id=1009, 585.18625pt x 230.8625pt>
 File: imagens/fig-test-result-print.png Graphic file (type png)
 <use imagens/fig-test-result-print.png>
 Package pdftex.def Info: imagens/fig-test-result-print.png  used on input line 
@@ -4842,7 +4846,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 509--509
  []
 
 (outros/codigos/python/test_codigo_002_lambda_somar.py)
-<imagens/fig-result-test-lambda-somar.png, id=1129, 1077.02374pt x 415.5525pt>
+<imagens/fig-result-test-lambda-somar.png, id=1084, 1077.02374pt x 415.5525pt>
 File: imagens/fig-result-test-lambda-somar.png Graphic file (type png)
 <use imagens/fig-result-test-lambda-somar.png>
 Package pdftex.def Info: imagens/fig-result-test-lambda-somar.png  used on inpu
@@ -6362,7 +6366,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 351--351
  [][] 
  []
 
-<imagens/fig-atencao-fundo-branco.png, id=1616, 718.685pt x 480.79625pt>
+<imagens/fig-atencao-fundo-branco.png, id=1572, 718.685pt x 480.79625pt>
 File: imagens/fig-atencao-fundo-branco.png Graphic file (type png)
 <use imagens/fig-atencao-fundo-branco.png>
 Package pdftex.def Info: imagens/fig-atencao-fundo-branco.png  used on input li
@@ -6625,7 +6629,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 410--410
  [][] 
  []
 
-<imagens/fig-result-test-class-produto.png, id=1680, 757.83125pt x 246.9225pt>
+<imagens/fig-result-test-class-produto.png, id=1636, 757.83125pt x 246.9225pt>
 File: imagens/fig-result-test-class-produto.png Graphic file (type png)
 <use imagens/fig-result-test-class-produto.png>
 Package pdftex.def Info: imagens/fig-result-test-class-produto.png  used on inp
@@ -7190,7 +7194,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 662--662
  [][] 
  []
 
-<imagens/fig-result-test-produto-critico.png, id=1849, 571.13374pt x 612.2875pt
+<imagens/fig-result-test-produto-critico.png, id=1805, 571.13374pt x 612.2875pt
 >
 File: imagens/fig-result-test-produto-critico.png Graphic file (type png)
 <use imagens/fig-result-test-produto-critico.png>
@@ -7414,7 +7418,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 721--721
  [][] 
  []
 
-<imagens/fig-result-test-especifico-produto-perecivel.png, id=1912, 584.1825pt 
+<imagens/fig-result-test-especifico-produto-perecivel.png, id=1868, 584.1825pt 
 x 242.9075pt>
 File: imagens/fig-result-test-especifico-produto-perecivel.png Graphic file (ty
 pe png)
@@ -7469,7 +7473,7 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 729--729
  [][] 
  []
 
-<imagens/fig-result-test-produto-perecivel.png, id=1929, 781.92125pt x 660.4675
+<imagens/fig-result-test-produto-perecivel.png, id=1885, 781.92125pt x 660.4675
 pt>
 File: imagens/fig-result-test-produto-perecivel.png Graphic file (type png)
 <use imagens/fig-result-test-produto-perecivel.png>
@@ -7980,14 +7984,8 @@ Overfull \hbox (15.3656pt too wide) in paragraph at lines 130--130
  [][] 
  []
 
-(material.gls
+No file material-backend-python.gls.
 
-LaTeX Font Warning: Font shape `T1/aess/b/it' undefined
-(Font)              using `T1/aess/b/n' instead on input line 5.
-
-LaTeX Font Info:    Font shape `T1/aess/b/it' in size <10> not available
-(Font)              Font shape `T1/aess/bx/n' tried instead on input line 5.
-)
 
 
 Overfull \hbox (68.28384pt too wide) has occurred while \output is active
@@ -8051,10 +8049,7 @@ Overfull \hbox (1.82993pt too wide) has occurred while \output is active
 [] 
  []
 
-[123
-
-
-]
+[123]
 Overfull \hbox (18.4373pt too wide) in paragraph at lines 138--138
  [][]  
  []
@@ -8111,26 +8106,49 @@ Overfull \hbox (1.82993pt too wide) has occurred while \output is active
 
 [124
 
-] (material.bbl
+] (material-backend-python.bbl
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\translate ' on input line 1.
 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{thebibliography}{1}
+                              
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <11.2> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 10.
 )
 
 [125
 
 ]
 \tf@nav=\write10
-\openout10 = `material.nav'.
+\openout10 = `material-backend-python.nav'.
 
 \tf@toc=\write11
-\openout11 = `material.toc'.
+\openout11 = `material-backend-python.toc'.
 
 \tf@snm=\write12
-\openout12 = `material.snm'.
+\openout12 = `material-backend-python.snm'.
 
- (material.aux)
+
+
+Package natbib Warning: There were undefined citations.
+
+(material-backend-python.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
@@ -8143,17 +8161,28 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `material.out' has not changed.
-(rerunfilecheck)             Checksum: CA4D69AA4C0BD519BB511B66314D7ECD;1876.
+
+Package rerunfilecheck Warning: File `material-backend-python.out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `material-backend-python.out':
+(rerunfilecheck)             Before: CAF60E3E7398C42D08B48D00369F1930;1694
+(rerunfilecheck)             After:  94A7472E5B869B3AB78636F1ED1954E5;1796.
  ) 
 Here is how much of TeX's memory you used:
- 57479 strings out of 475839
- 1298902 string characters out of 5778406
- 2375126 words of memory out of 5000000
- 77999 multiletter control sequences out of 15000+600000
- 706209 words of font info for 595 fonts, out of 8000000 for 9000
+ 57405 strings out of 475839
+ 1298414 string characters out of 5778406
+ 2375201 words of memory out of 5000000
+ 77968 multiletter control sequences out of 15000+600000
+ 700261 words of font info for 568 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 128i,19n,123p,2353b,2217s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,2368b,2217s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{glo:poo} has been referenced but does not exist, re
+placed by a fixed one
+
 
 pdfTeX warning (dest): name{glo:exercicio_017} has been referenced but does not
  exist, replaced by a fixed one
@@ -8178,6 +8207,54 @@ pdfTeX warning (dest): name{glo:exercicio_025} has been referenced but does not
 pdfTeX warning (dest): name{glo:exercicio_013} has been referenced but does not
  exist, replaced by a fixed one
 
+
+pdfTeX warning (dest): name{glo:exercicio_012} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:exercicio_011} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:exercicio_010} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:exercicio_009} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:exercicio_008} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:exercicio_007} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:exercicio_006} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:exercicio_005} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:exercicio_004} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:exercicio_003} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:exercicio_002} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:exercicio_001} has been referenced but does not
+ exist, replaced by a fixed one
+
  </home/bifm/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcss1440.pk
 > </home/bifm/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0500.p
 k> </home/bifm/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcss0500.
@@ -8197,9 +8274,9 @@ ex/texmfs/install/fonts/type1/public/amsfonts/cm/cmssi12.pfb></home/bifm/.mikte
 x/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/bifm/.miktex/
 texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/bifm/.miktex/tex
 mfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on material.pdf (125 pages, 1270069 bytes).
+Output written on material-backend-python.pdf (125 pages, 1254589 bytes).
 PDF statistics:
- 2298 PDF objects out of 2487 (max. 8388607)
- 293 named destinations out of 1000 (max. 500000)
- 271175 words of extra memory for PDF output out of 319454 (max. 10000000)
+ 2235 PDF objects out of 2487 (max. 8388607)
+ 291 named destinations out of 1000 (max. 500000)
+ 260911 words of extra memory for PDF output out of 266212 (max. 10000000)
 

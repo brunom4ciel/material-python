@@ -1,0 +1,18 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+.acn
+.aux
+.bbl
+.blg
+.glo
+.ist
+.log
+.nav
+.out
+
+.snm
+.synctex.gz
+.tex
+.toc
+
+
