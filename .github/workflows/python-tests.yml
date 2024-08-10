@@ -21,4 +21,4 @@ jobs:
 
       - name: Test with pytest
         run: |
-          pytest -m --cov=outros/codigos/python outros/codigos/python
+          pytest -m --cov=./outros/codigos/python ./outros/codigos/python
