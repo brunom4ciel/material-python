@@ -21,6 +21,4 @@ jobs:
 
       - name: Test with pytest
         run: |
-          pwd
-          ls -la
-          pytest -m --cov=./outros/codigos/python ./outros/codigos/python
+          python -m pytest --cov=outros/codigos/python outros/codigos/python
