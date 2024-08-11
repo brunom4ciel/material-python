@@ -1,22 +1,24 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-.acn
-.aux
-.bbl
-.blg
-.glo
-.ist
-.log
-.nav
-.out
+*.acn
+*.aux
+*.bbl
+*.blg
+*.glo
+*.ist
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.acr
+*.alg
+*.glg
+*.gls
 
-.snm
-.synctex.gz
-.tex
-.toc
-
-*.pytest_cache*
-*__pycache__*
-
+**.pytest_cache*
+__pycache__
+*/__pycache__/*
 *.coverage*
-
+**/__pycache__
