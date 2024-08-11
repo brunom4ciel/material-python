@@ -1,3 +1,5 @@
 #!/bin/sh
 
-python3 -m pytest --cov
+pytest --cov
+
+# or command python3 -m pytest --cov
