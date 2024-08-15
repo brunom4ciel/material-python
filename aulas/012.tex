@@ -1,0 +1,299 @@
+\pgfplotstablegetelem{\thepart}{[index]\columnIndex}\of{\cronograma}
+\part{\pgfplotsretval}
+\label{part:\thepart}
+\frame{\partpage}
+
+
+\begin{frame}[t]{Padrões de desenvolvimento de software}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		...continuando Padrões de desenvolvimento de software.\\ 
+		
+		São soluções típicas para problemas comuns em projeto de software.
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Reusabilidade de Software.
+			\item Conceitos e uso de SOLID.
+			\item {\color{red}Conceitos básicos de Padrões de Projeto.}
+			\item {\color{red}Padrões de Criação.}
+			\item {\color{red}Padrões Estruturais.}
+			\item {\color{red}Padrões Comportamentais.}
+			\item {\color{red}Padrão Arquitetural \acrshort{mvc} - \gls{mvc}.}
+
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	
+\end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}[t]{Padrões de criação}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		Propriedades dos padrões de criação:
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item funcionam com base no modo como os objetos podem ser criados.
+			
+			\item isolam os detalhes da criação dos objetos.
+			
+			\item o código é independente do tipo do objeto a ser criado.
+
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	*obs: exemplo de padrão de criação é o padrão Singleton (solteiro).
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Padrões estruturais}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		Propriedades dos padrões estruturais:
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item eles determinam o design da estrutura de objetos e classes para que estes possam ser compostos e resultados mais amplos sejam alcançados.
+			
+			\item o foco está em simplificar a estrutura e identificar o relacionamento entre classes e objetos.
+			
+			\item estão centrados em herança e composição de classes.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	*obs: exemplo de padrão estrutural é o padrão Adapter (adaptador).
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Padrões comportamentais}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		Propriedades dos padrões comportamentais:
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item estão preocupados com a interação entre os objetos e suas responsabilidades.
+			
+			\item os objetos devem ser capazes de interagir e, mesmo assim, devem ter baixo acomplamento.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	*obs: exemplo de padrão comportamental é o padrão Observer (observador).
+\end{frame}
+
+
+
+
+
+\begin{frame}[t]{Padrão Arquitetural MVC}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		A ideia do \gls{mvc} é ter um padrão de arquitetura cujo objetivo é \textbf{separar o projeto em três camadas independentes}, que são o modelo, a visão e o controlador.
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Essa \textbf{separação de camadas} ajuda na redução de acoplamento e promoção do aumento de coesão nas classes do projeto.
+			
+			\item Assim sendo, quando o modelo \gls{mvc} é utilizado, pode facilitar a manutenção do código e sua reutilização em outros projetos.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	*obs: 
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item \textbf{Baixo acoplamento}: é o grau em que uma classe conhece a outra.
+			
+			\item \textbf{Coesão}: uma classe com propósito bem definido (responsabilidade única) tem alta coesão, e isso é bom. Uma classe tem baixa coesão quando há propósitos que não pertencem apenas a ela, o que é ruim.
+			
+		\end{itemize}
+	}\par
+	
+\end{frame}
+
+
+
+
+
+\begin{frame}[t]{Padrão Arquitetural MVC}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		Explicando cada um dos objetos que o padrão \gls{mvc} tem.
+		
+	}\par
+	\vspace{0.5em}
+	
+	
+	\fontsize{11pt}{13}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Primeiramente o controlador (Controller), que interpreta as entradas enviadas ao aplicativo e mapeia essas ações em comandos que são enviados para o modelo (Model) e/ou para a janela de visualização (View) para efetuar a alteração apropriada.
+			
+			\item Por sua vez, o modelo (Model) gerencia um ou mais elementos de dados, responde a perguntas sobre o seu estado e responde a instruções para mudar de estado. O modelo sabe o que o aplicativo quer fazer e é a principal estrutura computacional da arquitetura, pois é ele quem modela o problema a ser resolvido.
+			
+			\item Por fim, a visão (View) gerencia a saída de dados e é responsável por apresentar as informações para quem solicitou. A visão não sabe nada sobre o que a aplicação está atualmente fazendo, pois tudo que ela realmente faz é receber instruções do controle e informações do modelo e então devolve-las. A visão também se comunica de volta com o modelo e com o controlador para sinalizar seu estado.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+
+\end{frame}
+
+
+\begin{frame}[t]{Padrão Arquitetural MVC}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		...continuando com o \gls{mvc}.
+		
+	}\par
+	\vspace{0.5em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Portanto, a principal ideia do modelo \gls{mvc} é separar conceitos - e do código. 
+			
+			\item O \gls{mvc} é como a clássica programação orientada a objetos, ou seja, criar objetos que escondem as suas informações e como elas são manipuladas e então apresentadas em uma interface.
+			
+			\item Entre as diversas vantagens do padrão \gls{mvc} estão a possibilidade de reescrita da \gls{gui} ou do Controller sem alterar o modelo, reutilização da \gls{gui} para diferentes aplicações com pouco esforço, facilidade na manutenção e adição de recursos, reaproveitamento de código, facilidade na manutenção do "código limpo".
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Padrão de projeto Singleton}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		O Singleton proporciona uma forma de ter um e somente um objeto de determinado tipo, além de disponibilizar um ponto de acesso global.
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item Por isso, os Singletons são geralmente utilizados em casos como logging ou operações de banco de dados e muito outro cenários em que seja necessário que haja apenas uma instância disponível para toda a aplicação a fim de evitiar requisições conflitantes para o mesmo recurso.
+			
+			\item Uma maneira simples de implementar o Singleton é deixar o construtor privado e criar um método estático que faça a inicialização do objeto. Mas em Python a implementação é um pouco diferente, pois não há como criar construtor privado.
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+
+\end{frame}
+
+
+
+\begin{frame}[t]{Vamos praticar}
+	\vspace{1em}
+	\centering
+	\begin{tikzpicture}
+		\node (image) {\includegraphics[width=7cm]{imagens/fig-atencao-fundo-branco.png}};
+		\node [font = {\fontsize{14pt}{15}\bfseries},x={(image.south east)},y={(image.north west)}] at (0,0){Vamos ler códigos};
+	\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}[t]{Padrão de projeto Singleton}
+
+	\lstinputlisting[style=CBruno,caption=Padrão de projeto Singleton]{outros/codigos/python/codigo_010_classe_singleton.py}
+
+	*obs: na \textbf{class Singleton(object)}, o objeto é criado com o método \_\_new\_\_, mas antes disso é feita uma verificação para saber se o objeto já existe. O método \textit{hasatt} (método especial de Python para saber se um objeto tem determinada propriedade) é usado para verificar se o objeto tem determinada propriedade \textit{instance}, que confere se a classe já tem um objeto.
+
+\end{frame}
+
+
+\begin{frame}[t]{Padrão de projeto Singleton Preguiçoso}
+	
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		Instanciação preguiçosa no padrão Singleton.
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item A instanciação preguiçosa garante que o objeto seja criado quando realmente precisamos dele.
+			
+			\item Considere a instanciação preguiçosa como uma maneira de trabalhar como recursos reduzidos e criá-los somente quando houver necessidade.
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+\begin{frame}[t]{Padrão de projeto Singleton Lazy}
+	
+	\lstinputlisting[style=CBruno,caption=Padrão de projeto Singleton Lazy]{outros/codigos/python/codigo_011_classe_singleton_lazy.py}
+	
+	*obs: Um \@classmethod é um método que recebe a classe como primeiro argumento em vez da instância. Isso significa que você pode acessar atributos e métodos de nível de classe a partir deste método. Um uso comum de \@classmethod é para definir construtores alternativos. Para usar @classmethod, sempre passe cls como o primeiro parâmetro.
+	
+	\href{https://peps.python.org/pep-0318/}{Para mais detalhes sobre decorados, clique aqui}
+	
+\end{frame}
+
+
+\begin{frame}[t]{Pytest}
+
+	\vspace{-0.5em}
+	\lstinputlisting[style=CBruno,caption=Cobertura de testes da classe Singleton]{outros/codigos/python/test_codigo_011_classe_singleton_lazy.py}
+
+\end{frame}
+
