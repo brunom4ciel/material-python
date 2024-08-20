@@ -1,4 +1,4 @@
-from codigo_009_print import print_obtem_numero, print_obter_tres_numeros_simples, print_obter_trinta_numeros, print_obter_n_numeros
+from src import print_obtem_numero, print_obter_tres_numeros_simples, print_obter_trinta_numeros, print_obter_n_numeros
 import pytest
 from unittest.mock import patch
 

@@ -1,4 +1,4 @@
-from codigo_006_classe_veiculo_com_exception import Veiculo
+from src import Veiculo
 import pytest
 
 @pytest.mark.parametrize(('chassi', 'motor'), [('KHG969878976G7DF9G7', 'SGD97S9')])

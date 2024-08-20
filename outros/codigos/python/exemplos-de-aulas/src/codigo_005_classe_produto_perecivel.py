@@ -1,4 +1,4 @@
-from codigo_003_classe_produto import Produto
+from src.codigo_003_classe_produto import Produto
 
 class ProdutoPerecivel(Produto):
     def __init__(self, nome: str, codigo: int, preco: int, quantidade: int, validade: int):

@@ -1,4 +1,4 @@
-from codigo_001_somar import somar
+from src import somar
 import pytest
 
 @pytest.mark.parametrize(('primeiro_numero', 'segundo_numero', 'resultado_esperado'), [(1, 1, 2), (11, 1, 12)])

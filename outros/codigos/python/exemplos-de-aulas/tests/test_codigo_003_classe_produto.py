@@ -1,4 +1,4 @@
-from codigo_003_classe_produto import Produto
+from src import Produto
 import pytest
 
 @pytest.mark.parametrize(('nome', 'codigo', 'preco', 'quantidade'), [('Arroz', 1, 1, 1), ('Feijao', 1, 1, 1)])

@@ -1,6 +1,6 @@
 import pytest
-from codigo_010_classe_singleton import Singleton
-from codigo_003_classe_produto import Produto
+from src import Singleton
+from src import Produto
 
 def testa_classe_singleton_se_duas_instancias_sao_iguais_com_sucesso():
 	singleton = Singleton()

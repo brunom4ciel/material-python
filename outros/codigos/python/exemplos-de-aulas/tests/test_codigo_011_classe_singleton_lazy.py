@@ -1,4 +1,4 @@
-from codigo_011_classe_singleton_lazy import SingletonLazy
+from src import SingletonLazy
 
 def testa_classe_singleton_lazy_se_duas_instancias_sao_iguais_com_sucesso():
 	singleton = SingletonLazy().get_instance()

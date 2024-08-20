@@ -1,7 +1,4 @@
-from codigo_008_input import obtem_numero
-from codigo_008_input import obter_tres_numeros_simples
-from codigo_008_input import obter_trinta_numeros
-from codigo_008_input import obter_n_numeros
+from src import obtem_numero, obter_tres_numeros_simples, obter_trinta_numeros, obter_n_numeros
 import pytest
 from unittest.mock import patch
 
