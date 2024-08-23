@@ -21,4 +21,5 @@ jobs:
 
       - name: Test with pytest
         run: |
-          python -m pytest --cov-fail-under=100 --cov=outros/codigos/python outros/codigos/python/exemplos-de-aulas/tests
+          cd outros/codigos/python/exemplos-de-aulas
+          python -m pytest --cov-fail-under=100 --cov=./src
