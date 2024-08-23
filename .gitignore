@@ -20,5 +20,5 @@
 **.pytest_cache*
 __pycache__
 */__pycache__/*
-*.coverage*
+*.coverage
 **/__pycache__
