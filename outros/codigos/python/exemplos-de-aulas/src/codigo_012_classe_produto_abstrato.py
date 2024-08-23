@@ -1,5 +1,4 @@
 import abc
-
 class ProdutoAbstrato(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def __init__(self, nome: str, codigo: int, preco: int, quantidade: int) -> None:
