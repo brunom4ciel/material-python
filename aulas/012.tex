@@ -249,11 +249,21 @@
 
 \begin{frame}[t]{Padrão de projeto Singleton}
 
-	\lstinputlisting[style=CBruno,caption=Padrão de projeto Singleton]{outros/codigos/python/codigo_010_classe_singleton.py}
+	\lstinputlisting[style=CBruno,caption=Padrão de projeto Singleton]{outros/codigos/python/exemplos-de-aulas/src/codigo_010_classe_singleton.py}
 
 	*obs: na \textbf{class Singleton(object)}, o objeto é criado com o método \_\_new\_\_, mas antes disso é feita uma verificação para saber se o objeto já existe. O método \textit{hasatt} (método especial de Python para saber se um objeto tem determinada propriedade) é usado para verificar se o objeto tem determinada propriedade \textit{instance}, que confere se a classe já tem um objeto.
 
 \end{frame}
+
+
+
+\begin{frame}[t]{Pytest}
+	
+	\vspace{-0.5em}
+	\lstinputlisting[style=CBruno,caption=Cobertura de testes da classe Singleton]{outros/codigos/python/exemplos-de-aulas/tests/test_codigo_010_classe_singleton.py}
+	
+\end{frame}
+
 
 
 \begin{frame}[t]{Padrão de projeto Singleton Preguiçoso}
@@ -281,7 +291,7 @@
 
 \begin{frame}[t]{Padrão de projeto Singleton Lazy}
 	
-	\lstinputlisting[style=CBruno,caption=Padrão de projeto Singleton Lazy]{outros/codigos/python/codigo_011_classe_singleton_lazy.py}
+	\lstinputlisting[style=CBruno,caption=Padrão de projeto Singleton Lazy]{outros/codigos/python/exemplos-de-aulas/src/codigo_011_classe_singleton_lazy.py}
 	
 	*obs: Um \@classmethod é um método que recebe a classe como primeiro argumento em vez da instância. Isso significa que você pode acessar atributos e métodos de nível de classe a partir deste método. Um uso comum de \@classmethod é para definir construtores alternativos. Para usar @classmethod, sempre passe cls como o primeiro parâmetro.
 	
@@ -293,7 +303,7 @@
 \begin{frame}[t]{Pytest}
 
 	\vspace{-0.5em}
-	\lstinputlisting[style=CBruno,caption=Cobertura de testes da classe Singleton]{outros/codigos/python/test_codigo_011_classe_singleton_lazy.py}
+	\lstinputlisting[style=CBruno,caption=Cobertura de testes da classe Singleton]{outros/codigos/python/exemplos-de-aulas/tests/test_codigo_011_classe_singleton_lazy.py}
 
 \end{frame}
 

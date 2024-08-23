@@ -3,3 +3,264 @@
 \label{part:\thepart}
 \frame{\partpage}
 
+
+\begin{frame}[t]{Exemplos de criação de classe}
+	
+	\fontsize{14pt}{15}\selectfont{
+		
+		...continuando a partir da aula passada sobre \gls{poo}.
+		
+	}\par
+	\vspace{1em}
+	
+	
+\end{frame}
+
+\begin{frame}[t]{classe Produto}
+	
+	\fontsize{14pt}{15}\selectfont{
+		
+		O nome \textbf{self} refere-se ao particular objeto sendo criado. Note que o primeiro parâmetro é sempre self na definição. No uso ou na chamada do método esse primeiro parâmetro não existe.
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->] 
+			
+			\item No exemplo anterior incluímos além da definição da classe, alguns comandos de teste dos métodos da mesma. Assim o módulo (arquivo onde está armazenada a classe) poderia chamar-se Produto.py.
+			
+			\item O comando if \textbf{\_\_name\_\_} == “\textbf{\_\_main\_\_}” usado antes dos testes anteriormente, determina que os comandos abaixo somente serão executados quando a classe estiver sendo testada, isto é, quando for solicitada a execução do módulo Produto.py
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	
+\end{frame}
+
+
+
+
+
+\begin{frame}[t]{Uso e declaração dos métodos}
+	
+	\fontsize{14pt}{15}\selectfont{
+%		...continuando \acrshort{poo}.\\ 
+		
+		Quando o método é declarado sempre o primeiro parâmetro é self, quando é necessário acesso ao objeto.	Entretanto nas chamadas omite-se esse parâmetro. O correspondente ao self torna-se o prefixo da chamada.
+		
+	}\par
+	\vspace{1em}
+	
+	
+	Declaração:
+	\vspace{1em}
+	\begin{beamercolorbox}[wd=\textwidth]{warning}		
+		def altera\_preco(self, novo\_preco):\\
+		\hspace{1em}{Instruções}
+	\end{beamercolorbox}
+	
+	Uso:
+	\vspace{1em}
+	\begin{beamercolorbox}[wd=\textwidth]{warning}
+		p1 = Produto("Arroz", 1, 2, 5)\\
+		if p1.altera\_preco(2): print('False')
+	\end{beamercolorbox}
+	
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{O método construtor}
+	
+	\fontsize{14pt}{15}\selectfont{
+		
+		\textbf{\_\_init\_\_} é um método especial dentro da classe. É construtor da classe, onde os atributos do objeto recebem seus valores iniciais. 
+		
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->] 
+			
+			\item No caso da classe Produto, os 4 atributos (variáveis) que caracterizam um produto, recebem neste método seus valores iniciais, que podem ser modificados por operações futuras deste mesmo objeto. 
+			
+			\item A criação de um novo produto, ou seja, a criação de uma instância do objeto produto causa a execução do método \textbf{\_\_init\_\_}. Assim, o comando abaixo, causa a execução do método \textbf{\_\_init\_\_}:
+			
+			
+			\vspace{1em}
+			\begin{beamercolorbox}[wd=\textwidth]{warning}
+				p1 = Produto("Arroz", 1, 2, 5)
+			\end{beamercolorbox}
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Explorar a sintaxe das classes – o parâmetro self}
+	
+	\fontsize{14pt}{15}\selectfont{
+		
+		O parâmetro self é importante no método construtor da classe \textbf{\_\_init\_\_}, para referenciar o objeto que está sendo criado. Nos demais métodos, se usado, é simplesmente um parâmetro. Nem precisa ser o primeiro. Mesmo no \textbf{\_\_init\_\_}, o primeiro parâmetro pode ter qualquer nome. 
+		
+	}\par
+	\vspace{1em}
+	
+	\fontsize{14pt}{25}\selectfont{
+		\begin{beamercolorbox}[wd=\textwidth]{warning}
+			class Produto:\\
+			\hspace{1em}def \_\_init\_\_(outro, nome):\\
+			\hspace{2em}outro.nome = nome\\
+			
+			
+			\hspace{1em}def altera\_nome(nome, self):\\
+			\hspace{2em}self.nome = nome
+		\end{beamercolorbox}
+		
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Explorar a sintaxe das classes – o parâmetro self}
+	
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->] 
+			
+			\item No caso da classe acima, os 4 atributos (variáveis) que caracterizam um produto, recebem neste método seus valores iniciais, que podem ser modificados por operações futuras deste mesmo objeto. 
+			
+			\item A criação de um novo produto, ou seja, a criação de uma instância do objeto produto causa a execução do método \textbf{\_\_init\_\_}. Assim, o comando abaixo, causa a execução do método \textbf{\_\_init\_\_}:
+			
+			
+			\vspace{1em}
+			\begin{beamercolorbox}[wd=\textwidth]{warning}
+				p1 = Produto("Arroz", 1, 2, 5)
+			\end{beamercolorbox}
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Explorar a sintaxe das classes}
+	
+	\fontsize{14pt}{15}\selectfont{
+		
+		Uma classe não precisa necessariamente ter um método construtor. Podemos ter uma classe apenas com métodos, sem atributos. Nesse caso, o nome da classe é usado sem parâmetros para a chamada das funções.
+		
+	}\par
+	\vspace{1em}
+	
+	\fontsize{14pt}{25}\selectfont{
+		\begin{beamercolorbox}[wd=\textwidth]{warning}
+			\textbf{class} Produto:\\		
+			
+			\hspace{1em}\textbf{def} imprime\_nome(nome):\\
+			\hspace{2em}\textbf{print}(nome)\\
+			\vspace{1em}
+			Produto.imprime\_nome('Arroz')
+			
+		\end{beamercolorbox}
+		
+	}\par
+	\vspace{1em}
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Script Python com passagem de parâmetros}
+	
+	\fontsize{14pt}{15}\selectfont{
+		
+		Como usar os argumentos passados para um script python?
+	}\par
+	\vspace{1em}
+	
+	Arquivo principal.py com conteúdo:\\
+	\vspace{1em}
+	\fontsize{14pt}{25}\selectfont{
+		\begin{beamercolorbox}[wd=\textwidth]{warning}
+			\textbf{import} sys\\
+			\textbf{for} value \textbf{in} sys.argv:\\
+			\hspace{1em}\textbf{print}(value)
+			
+		\end{beamercolorbox}
+		
+	}\par
+	\vspace{1em}
+
+\vspace{0.25em}
+\fontsize{12pt}{10}\selectfont{
+	*obs: inicialize seu script assim: \textit{python3 principal.py arg1 arg2 arg3}
+}\par
+
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Script Python com passagem de parâmetros}
+	
+	\vspace{-0.5em}
+	
+	\lstinputlisting[style=CBruno,caption=Inicialização de script com parâmetros]{outros/codigos/python/exemplos-de-aulas/src/codigo_014_argv.py}
+	
+	\vspace{0.25em}
+	\fontsize{12pt}{10}\selectfont{
+		*obs: inicialize seu script assim: \textit{python3 principal.py arg1 arg2 arg3}
+	}\par
+	
+\end{frame}
+
+
+\begin{frame}[t]{Pytest}
+	
+	\vspace{1em}
+	\lstinputlisting[style=CBruno,caption=Cobertura de testes]{outros/codigos/python/exemplos-de-aulas/tests/test_codigo_014_argv.py}
+	
+\end{frame}
+
+
+
+\begin{frame}[t]{Exercícios}
+	
+	\fontsize{12pt}{19}\selectfont{
+		Escreva o algoritmo e programa. Use \gls{poo} para resolver.
+		\begin{itemize}%[<+->]
+			
+			\item \glsfirst{exercicio_017}: \glsdesc{exercicio_017}
+			
+			\vspace{1em}
+			\centering
+			\includegraphics[scale=0.15]{imagens/fig-atencao-pessoas-estudando.png}
+			
+			%			\item \glsfirst{exercicio_014}: \glsdesc{exercicio_014}
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	
+	
+\end{frame}
+
+
+
+

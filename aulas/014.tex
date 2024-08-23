@@ -3,3 +3,92 @@
 \label{part:\thepart}
 \frame{\partpage}
 
+
+
+
+\begin{frame}[t]{Padrões de desenvolvimento de software}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		...continuando Padrões de desenvolvimento de software.\\ 
+	}\par
+	\vspace{1em}
+	
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item {\color{red}Padrões de Criação.}
+			
+				\begin{itemize}%[<+->]
+					\item {\color{blue}Singleton \CheckmarkBold}
+					\item Abstract Factory \XSolidBrush
+					\item Builder \XSolidBrush
+					\item Factory Method \XSolidBrush
+					\item Prototype \XSolidBrush
+				\end{itemize}
+				
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Padrões de criação}
+
+	\fontsize{12pt}{15.2}\selectfont{
+		Abstract Factory \CheckmarkBold
+
+	}\par
+	\vspace{1em}
+
+
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+
+			\item fornece uma interface para criar famílias de objetos relacionados ou dependentes sem especificar suas classes concretas.
+
+			\item Em outras palavras, ele permite que você crie objetos sem precisar saber exatamente qual classe concreta será instanciada.
+
+		\end{itemize}
+	}\par
+	\vspace{1em}
+
+\end{frame}
+
+
+
+\begin{frame}[t]{Padrões de criação - Abstract Factory}
+	
+	\fontsize{12pt}{15.2}\selectfont{
+		Principais considerações:
+
+	}\par
+	\vspace{0.5em}
+
+
+	\fontsize{12pt}{14}\selectfont{
+		\begin{enumerate}%[<+->]
+			
+			\item \textbf{AbstractFactory}: Define uma interface para criar produtos abstratos. Normalmente, essa interface declara métodos para criar cada tipo de produto que a fábrica pode produzir.
+			
+			\item \textbf{ConcreteFactory}: Implementa a interface da fábrica abstrata e produz instâncias concretas dos produtos.
+			
+			\item \textbf{AbstractProduct}: Declara uma interface para um tipo de produto. Cada produto específico deve implementar essa interface.
+			
+			\item \textbf{ConcreteProduct}: Implementa a interface do produto abstrato. Cada fábrica concreta criará instâncias desse tipo de produto.
+			
+			\item \textbf{Client}: Usa apenas as interfaces definidas pela fábrica abstrata e pelos produtos abstratos para trabalhar com os objetos. O cliente não precisa saber quais classes concretas estão sendo usadas.
+			
+		\end{enumerate}
+	}\par
+	\vspace{1em}
+
+\end{frame}
+
+
+
+
