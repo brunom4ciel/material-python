@@ -23,6 +23,12 @@ from .codigo_015_sofa_classico_concreta import SofaClassicoConcreta
 from .codigo_015_moveis_modernos_factory_concreto import MoveisModernosFactoryConcreto
 from .codigo_015_moveis_classicos_factory_concreto import MoveisClassicosFactoryConcreto
 from .codigo_015_codigo_cliente import codigo_cliente
+from .codigo_016_documento_abstrata import DocumentoAbstrata
+from .codigo_016_documento_pdf_concreta import DocumentoPdfConcreta
+from .codigo_016_documento_msword_concreta import DocumentoMsWordConcreta
+from .codigo_016_codigo_cliente_factory_method import codigo_cliente_factory_method
+from .codigo_016_documento_factory_method_concreta import DocumentoFactoryMethodConcreta
+from .codigo_016_codigo_cliente_factory_method2 import codigo_cliente_factory_method2
 
 __all__ = ['somar', 'somar_lambda', 'Produto', 'ProdutoPerecivel', 
            'ProdutoCritico', 'Veiculo', 'obtem_numero', 
@@ -35,7 +41,9 @@ __all__ = ['somar', 'somar_lambda', 'Produto', 'ProdutoPerecivel',
            'CadeiraAbstrata', 'CadeiraModernaConcreta', 'SofaModernoConcreta',
            'MoveisFactoryAbstrato', 'CadeiraClassicaConcreta', 'SofaClassicoConcreta',
            'MoveisModernosFactoryConcreto', 'MoveisClassicosFactoryConcreto', 
-           'codigo_cliente']
+           'codigo_cliente', 'DocumentoAbstrata', 'DocumentoPdfConcreta',
+           'DocumentoMsWordConcreta', 'codigo_cliente_factory_method',
+           'DocumentoFactoryMethodConcreta', 'codigo_cliente_factory_method2']
 
 # A partir do Python 3.3, o __init__.py se tornou opcional para pacotes. 
 # Se um diretório não contém um __init__.py, ele é considerado um pacote namespace. 
