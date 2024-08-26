@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug Pytest",
+        "type": "python",
+        "request": "launch",
+        "program": "${workspaceFolder}/venv/bin/python",  // Caminho correto para o Python do venv
+        "args": [
+          "-m", "pytest", "./outros/codigos/python/exemplos-de-aulas/tests"
+        ],
+        "console": "integratedTerminal",
+        "justMyCode": false
+      }
+    ]
+  }
+  

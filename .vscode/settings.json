@@ -1,5 +1,11 @@
 {
     "python.analysis.extraPaths": [
-        "./outros/codigos/python"
-    ]
+        "./outros/codigos/python/exemplos-de-aulas"
+    ],
+    "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestArgs": [
+    "./outros/codigos/python/exemplos-de-aulas/tests"
+  ]
 }
