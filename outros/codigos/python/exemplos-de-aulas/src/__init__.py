@@ -29,11 +29,6 @@ from .codigo_016_documento_msword_concreta import DocumentoMsWordConcreta
 from .codigo_016_codigo_cliente_factory_method import codigo_cliente_factory_method
 from .codigo_016_documento_factory_method_concreta import DocumentoFactoryMethodConcreta
 from .codigo_016_codigo_cliente_factory_method2 import codigo_cliente_factory_method2
-from .codigo_017_produto_base import ProdutoBase
-from .codigo_017_builder_concreta import BuilderConcreta
-from .codigo_017_builder_abstrato import BuilderAbstrato
-from .codigo_017_diretor_base import Diretor
-from .codigo_017_codigo_cliente_builder import codigo_cliente_builder
 
 __all__ = ['somar', 'somar_lambda', 'Produto', 'ProdutoPerecivel', 
            'ProdutoCritico', 'Veiculo', 'obtem_numero', 
@@ -48,9 +43,7 @@ __all__ = ['somar', 'somar_lambda', 'Produto', 'ProdutoPerecivel',
            'MoveisModernosFactoryConcreto', 'MoveisClassicosFactoryConcreto', 
            'codigo_cliente', 'DocumentoAbstrata', 'DocumentoPdfConcreta',
            'DocumentoMsWordConcreta', 'codigo_cliente_factory_method',
-           'DocumentoFactoryMethodConcreta', 'codigo_cliente_factory_method2',
-           'ProdutoBase', 'BuilderConcreta', 'BuilderAbstrato', 'Diretor', 
-           'codigo_cliente_builder']
+           'DocumentoFactoryMethodConcreta', 'codigo_cliente_factory_method2']
 
 # A partir do Python 3.3, o __init__.py se tornou opcional para pacotes. 
 # Se um diretório não contém um __init__.py, ele é considerado um pacote namespace. 

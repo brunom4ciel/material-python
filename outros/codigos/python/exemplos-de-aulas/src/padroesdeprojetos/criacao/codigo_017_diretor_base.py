@@ -1,4 +1,4 @@
-from src.codigo_017_builder_abstrato import BuilderAbstrato
+from .codigo_017_builder_abstrato import BuilderAbstrato
 
 class Diretor:
     def __init__(self, builder: BuilderAbstrato):

@@ -1,5 +1,5 @@
-from src.codigo_017_builder_abstrato import BuilderAbstrato
-from src.codigo_017_produto_base import ProdutoBase
+from .codigo_017_builder_abstrato import BuilderAbstrato
+from .codigo_017_produto_base import ProdutoBase
 
 class BuilderConcreta(BuilderAbstrato):
 

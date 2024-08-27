@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch
-from src import codigo_cliente_builder
+from src.padroesdeprojetos.criacao import codigo_cliente_builder
 
 @pytest.mark.parametrize("valor_esperado", [("Produto: Parte1=Parte 1, Parte2=Parte 2, Parte3=Parte 3")])
 def teste_codigo_cliente_builder_com_sucesso(valor_esperado):
