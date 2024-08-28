@@ -4,16 +4,22 @@ from .codigo_017_produto_base import ProdutoBase
 class BuilderConcreta(BuilderAbstrato):
 
     def __init__(self):
-        self.produtoBase = ProdutoBase()
+        self.limpar()
 
-    def build_parte1(self)-> str:
-        self.produtoBase.parte1 = "Parte 1"
+    def limpar(self) -> None:
+        self.__produtoBase = ProdutoBase()
 
-    def build_parte2(self)-> str:
-        self.produtoBase.parte2 = "Parte 2"
+    @property
+    def produto(self)-> ProdutoBase:
+        produto = self.__produtoBase
+        self.limpar()
+        return produto
 
-    def build_parte3(self)-> str:
-        self.produtoBase.parte3 = "Parte 3"
+    def construir_parte_a(self) -> None:
+        self.__produtoBase.adicionar_parte("Parte a")
 
-    def obter_resultado(self)-> ProdutoBase:
-        return self.produtoBase
+    def construir_parte_b(self)-> None:
+        self.__produtoBase.adicionar_parte("Parte b")
+
+    def construir_parte_c(self)-> None:
+        self.__produtoBase.adicionar_parte("Parte c")

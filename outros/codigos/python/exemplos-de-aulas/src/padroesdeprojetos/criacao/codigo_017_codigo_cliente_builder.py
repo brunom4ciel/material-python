@@ -1,27 +1,22 @@
-if __name__ == "__main__":
-    import sys
-    import os
-    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-    from padroesdeprojetos.criacao.codigo_017_builder_concreta import BuilderConcreta
-    from padroesdeprojetos.criacao.codigo_017_diretor_base import Diretor
-else:
-    from .codigo_017_builder_concreta import BuilderConcreta
-    from .codigo_017_diretor_base import Diretor
+# trecho de código para que seja possível você inicializar direto este script
+# com base nos pacotes.
+# início
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))) # volta 2 pastas
+# fim
+from padroesdeprojetos.criacao.codigo_017_builder_concreta import BuilderConcreta
+from padroesdeprojetos.criacao.codigo_017_diretor_base import Diretor
 
 def codigo_cliente_builder():
-    # Criando um ConcreteBuilder
-    builder = BuilderConcreta()
+    diretor = Diretor()
+    diretor.construir = BuilderConcreta()
 
-    # Passando o builder para o Director
-    diretor = Diretor(builder)
+    diretor.construir_produto_simples()    
+    print(f"{diretor.construir.produto}")
 
-    # O diretor constrói o produto
-    diretor.construir()
-
-    # Obtendo o produto final
-    produto = builder.obter_resultado()
-
-    print(f"{produto}")
+    diretor.construir_produto_sofisticado()    
+    print(f"{diretor.construir.produto}")
 
 if __name__ == "__main__":
     codigo_cliente_builder()

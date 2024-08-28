@@ -1,10 +1,21 @@
 from .codigo_017_builder_abstrato import BuilderAbstrato
 
 class Diretor:
-    def __init__(self, builder: BuilderAbstrato):
-        self.builder = builder
+    def __init__(self)-> None:
+        self.__construir = None
 
-    def construir(self):
-        self.builder.build_parte1()
-        self.builder.build_parte2()
-        self.builder.build_parte3()
+    @property
+    def construir(self) -> BuilderAbstrato:
+        return self.__construir
+    
+    @construir.setter
+    def construir(self, construir: BuilderAbstrato) -> None:
+        self.__construir = construir
+
+    def construir_produto_simples(self) -> None:
+        self.__construir.construir_parte_c()
+
+    def construir_produto_sofisticado(self) -> None:
+        self.__construir.construir_parte_a()
+        self.__construir.construir_parte_b()
+        self.__construir.construir_parte_c()
