@@ -69,12 +69,15 @@
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
+\newcommand{\indentrule}{\color{gray}\rlap{\smash{\hspace{6pt}\rule[-.35em]{1pt}{1.45em}}}}
+
 \lstdefinestyle{CBruno}{
   inputencoding=utf8,
 %   extendedchars=false,
     language=python,
     backgroundcolor=\color{white},
     commentstyle=\color{dkgreen},
+    morestring=[s]{"""}{"""},
     % keywordstyle=\color{blue},
     % keywordstyle={[2]\color{magenta}},
     numberstyle=\tiny\color{gray},
@@ -147,7 +150,7 @@
     \setbeamercolor{saibamais}{fg=cinzaescuro,bg=cinzaclaro}
 	\setbeamercolor{saibamaistitulo}{fg=aliceblue,bg=cinzaescuro}
 	\setbeamercovered{transparent}
-	\renewcommand{\inputFilesStartValue}{16}
+	\renewcommand{\inputFilesStartValue}{1}
 	\renewcommand{\inputFilesMaxValue}{20}
 }{}
 \makeatother%
@@ -308,4 +311,5 @@ x &  & Novembro & 30/11/2024 & Web Services
 %	},
 %	reduce height/.default={0pt}
 %}
+
 

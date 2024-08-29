@@ -239,9 +239,14 @@
 
 	\lstinputlisting[style=CBruno,caption=Código da Classe Produto Base - codigo\_017\_produto\_base.py]{outros/codigos/python/exemplos-de-aulas/src/padroesdeprojetos/criacao/codigo_017_produto_base.py}
 
-	\lstinputlisting[style=CBruno,caption=Código da Classe Builder Abtratato - codigo\_017\_builder\_abstrato.py]{outros/codigos/python/exemplos-de-aulas/src/padroesdeprojetos/criacao/codigo_017_builder_abstrato.py}
-
 \end{frame}
+
+\begin{frame}[t]{Padrão de projeto - Builder}
+
+	\lstinputlisting[style=CBruno,caption=Código da Classe Builder Abtratato - codigo\_017\_builder\_abstrato.py]{outros/codigos/python/exemplos-de-aulas/src/padroesdeprojetos/criacao/codigo_017_builder_abstrato.py}
+	
+\end{frame}
+
 
 
 \begin{frame}[t]{Padrão de projeto - Builder}
@@ -259,9 +264,267 @@
 
 
 \begin{frame}[t]{Padrão de projeto - Builder}
-	
+
 	\lstinputlisting[style=CBruno,caption=Código da Função Código do cliente - codigo\_017\_codigo\_cliente\_builder.py]{outros/codigos/python/exemplos-de-aulas/src/padroesdeprojetos/criacao/codigo_017_codigo_cliente_builder.py}
+
+\end{frame}
+
+
+
+\begin{frame}[t]{Pytest}
+
+	\lstinputlisting[style=CBruno,caption=Código do teste para o Código do cliente - test\_codigo\_017\_codigo\_cliente\_builder.py]{outros/codigos/python/exemplos-de-aulas/tests/test_codigo_017_codigo_cliente_builder.py}
+
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Padrões de desenvolvimento de software}
+
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]  
+			
+			\item {\color{red}Padrões de Criação.}
+			
+			\begin{itemize}%[<+->]
+				\item {\color{blue}Singleton \CheckmarkBold}
+				\item {\color{blue}Abstract Factory \CheckmarkBold}
+				\item {\color{blue}Factory Method \CheckmarkBold}
+				\item {\color{blue}Builder \CheckmarkBold}
+				\item Prototype \XSolidBrush
+			\end{itemize}
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
 	
 \end{frame}
 
+
+
+
+
+\begin{frame}[t]{Padrões de criação - Prototype}
+	\fontsize{12pt}{15}\selectfont{
+		{\color{blue}Prototype (Protótipo) \CheckmarkBold}
+	}\par
+	\vspace{1em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]
+			
+			\item Padrão criacional que permite a criação de novos objetos copiando ou clonando instâncias existentes, em vez de criar novas instâncias do zero.
+			
+			\item Isso é útil quando o custo de criação de um novo objeto é alto ou quando você deseja evitar a complexidade de inicializar um objeto em seu estado inicial.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+\end{frame}
+
+
+
+\begin{frame}[t]{Padrões de criação - Prototype}
+	\fontsize{12pt}{15}\selectfont{
+		Exemplo
+	}\par
+	\vspace{0.5em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{enumerate}%[<+->]
+			
+			\item \textbf{Classe PrototypeBase} - Uma interface ou classe abstrata que define o método clone(), que é responsável por criar uma cópia do objeto.
+			
+			\item \textbf{Classe PrototypeConcreta1 e PrototypeConcreta2} - Classes concretas que implementam a interface Prototype e sobrescrevem o método clone() para retornar uma cópia do objeto.
+			
+			\item \textbf{Código do cliente para utilizar o Padrão Prototype} - O local que utiliza o método clone() para criar novos objetos a partir de protótipos.
+			
+		\end{enumerate}
+	}\par
+	\vspace{1em}
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Padrões de criação - Prototype}
+	\fontsize{14pt}{15}\selectfont{
+		Resumo
+	}\par
+	\vspace{1em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->]
+			
+			\item Prototype:  Define a interface clone() que as subclasses precisam implementar.
+			
+			\item PrototypeConcreta1 e PrototypeConcreta2: Implementam a interface Prototype e fornecem a implementação do método clone() que usa copy.deepcopy() para criar uma cópia profunda do objeto.
+			
+			\item Cliente: O cliente cria novos objetos clonando os protótipos.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+\end{frame}
+
+
+
+\begin{frame}[t]{Padrões de criação - Prototype}
+	\fontsize{16pt}{15}\selectfont{
+		Aplicação
+	}\par
+	\vspace{1em}
+	
+	\fontsize{14pt}{15}\selectfont{
+		\begin{itemize}%[<+->]
+			
+			\item Quando o custo de criação de um novo objeto é muito caro ou complexo.
+			
+			\item Quando você deseja evitar a duplicação do estado de configuração dos objetos.
+			
+			\item Quando você precisa de uma variedade de objetos semelhantes.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+	O padrão Prototype é particularmente útil em cenários onde os objetos têm um estado inicial complexo ou quando você precisa criar cópias de objetos com uma configuração específica que não pode ser facilmente reproduzida.
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Padrões de criação - Prototype}
+	
+	\vspace{1em}
+	\begin{tikzpicture}[
+		every node/.style={
+			draw=blue!50!white,
+			minimum width=2.5in,
+			minimum height=1.5em,
+			font=\sffamily,
+			anchor=north,
+		},
+		connect/.style={
+			draw=blue!70!white,
+			-stealth,
+		},
+		]
+		
+		\node[draw] (PrototypeBase) at (0,0) {Class PrototypeBase}; %nó A
+		\node[below=of PrototypeBase] (PrototypeConcreta1) {Class PrototypeConcreta1}; %nó B
+		\draw[<-] (PrototypeBase) to (PrototypeConcreta1);
+		
+		\node[below right=of PrototypeConcreta1] (PrototypeConcreta2) {Class PrototypeConcreta2}; %nó B
+		\draw[<-] (PrototypeBase) to (PrototypeConcreta2);
+		
+		\node[right=of PrototypeBase] (Cliente) {Cliente}; %nó B
+		\draw[<-] (PrototypeBase) to (Cliente);
+
+	\end{tikzpicture}
+	
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Padrões de criação - Prototype}
+	
+	
+	\centering
+	\begin{minipage}{4cm}
+		\begin{block}{}
+			Class PrototypeBase
+		\end{block}
+	\end{minipage} 
+	$\underrightarrow{\makebox[2cm][r]{Possui}\hspace{2em}}$
+	\begin{minipage}{6cm}
+		\begin{block}{}
+			Interface para definir o clone de objeto.
+		\end{block}
+	\end{minipage}
+	\vfill
+	\begin{minipage}{4cm}
+		\begin{block}{}
+			Class PrototypeConcreta1
+		\end{block}
+	\end{minipage} 
+	$\underrightarrow{\makebox[2cm][r]{Possui}\hspace{2em}}$
+	\begin{minipage}{6cm}
+		\begin{block}{}
+			Implementa a lógica para definir o clone do objeto PrototypeConcreta1.
+		\end{block}
+	\end{minipage}
+	\vfill
+	\begin{minipage}{4cm}
+		\begin{block}{}
+			Class PrototypeConcreta2
+		\end{block}
+	\end{minipage} 
+	$\underrightarrow{\makebox[2cm][r]{Possui}\hspace{2em}}$
+	\begin{minipage}{6cm}
+		\begin{block}{}
+			Implementa a lógica para definir o clone do objeto PrototypeConcreta2.
+		\end{block}
+	\end{minipage}
+	\vfill
+	\begin{minipage}{4cm}
+		\begin{block}{}
+			def codigo\_cliente\_prototype
+		\end{block}
+	\end{minipage} 
+	$\underrightarrow{\makebox[2cm][r]{Possui}\hspace{2em}}$
+	\begin{minipage}{6cm}
+		\begin{block}{}
+			Implementa o código do cliente para obter o clone.
+		\end{block}
+	\end{minipage}
+\end{frame}
+
+
+
+
+
+\begin{frame}[t]{Padrão de projeto - Prototype}
+	
+	\lstinputlisting[style=CBruno,caption=Código da Classe Prototype Base - codigo\_018\_prototype\_base.py]{outros/codigos/python/exemplos-de-aulas/src/padroesdeprojetos/criacao/codigo_018_prototype_base.py}
+	
+\end{frame}
+
+
+\begin{frame}[t]{Padrão de projeto - Prototype}
+	
+	\lstinputlisting[style=CBruno,caption=Código da Classe Prototype Concreta 1 - codigo\_018\_prototype\_concreta1.py]{outros/codigos/python/exemplos-de-aulas/src/padroesdeprojetos/criacao/codigo_018_prototype_concreta1.py}
+	
+	\vspace{1cm}
+	\url{https://docs.python.org/pt-br/3/library/copy.html}
+	
+\end{frame}
+
+
+\begin{frame}[t]{Padrão de projeto - Prototype}
+	
+	\lstinputlisting[style=CBruno,caption=Código da Classe Prototype Concreta 2 - codigo\_018\_prototype\_concreta2.py]{outros/codigos/python/exemplos-de-aulas/src/padroesdeprojetos/criacao/codigo_018_prototype_concreta2.py}
+	
+	\vspace{1cm}
+	\url{https://docs.python.org/pt-br/3/library/copy.html}
+	
+\end{frame}
+
+
+\begin{frame}[t]{Padrão de projeto - Prototype}
+	
+	\lstinputlisting[style=CBruno,caption=Código da Função Código do cliente - codigo\_018\_codigo\_cliente\_prototype.py]{outros/codigos/python/exemplos-de-aulas/src/padroesdeprojetos/criacao/codigo_018_codigo_cliente_prototype.py}
+	
+\end{frame}
+
+
+\begin{frame}[t]{Pytest}
+	
+	\lstinputlisting[style=CBruno,caption=Código do teste para o Código do cliente - test\_codigo\_018\_codigo\_cliente\_prototype.py]{outros/codigos/python/exemplos-de-aulas/tests/test_codigo_018_codigo_cliente_prototype.py}
+	
+\end{frame}
 
