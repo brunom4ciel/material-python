@@ -74,33 +74,45 @@
 \end{frame}
 
 
-
-
-
 \begin{frame}[t]{Exercícios}
-	
-	\fontsize{12pt}{19}\selectfont{
+	\fontsize{10pt}{15}\selectfont{
 		Escreva o algoritmo e programa. Use Herança de \gls{poo} para resolver.
 		\begin{itemize}%[<+->]
-			
 			\item \glsfirst{exercicio_018}: \glsdesc{exercicio_018}
-			
-			\vspace{1em}
-			\centering
-			\includegraphics[scale=0.13]{imagens/fig-atencao-pessoas-estudando.png}
-			
-			%			\item \glsfirst{exercicio_014}: \glsdesc{exercicio_014}
-			
+			\vspace{0.5em}
+%			\includegraphics[scale=0.06]{imagens/fig-atencao-pessoas-estudando.png}
 		\end{itemize}
 	}\par
 	\vspace{1em}
-	
-	
-	
 \end{frame}
 
 
-
+\begin{frame}[t]{Algoritmo}
+	\fontsize{9pt}{9}\selectfont{
+	\begin{itemize}%[<+->]
+		\item Ler quantidade atual (qtd\_atual) quantidade máxima (qtd\_max) e quantidade mínima em estoque (qtd\_min).
+		\item Obtenha a quantidade média do estoque, dado por qtd\_media = (qtd\_max + qtd\_min)/2.
+		\item Obtenha a quantidade média do estoque crítico, dado por qtd\_media\_critico = (qtd\_max - qtd\_min)/2.
+		\item Obtenha a situação do estoque, dada por\\ 
+		situacao\_estoque = Se qtd\_atual >= qtd\_media, então 'Não efetuar compra' SeNão 'Efetuar compra'
+		\item Obtenha a situação do estoque crítico, dada por\\ 
+		situacao\_estoque\_critico = Se qtd\_atual >= qtd\_media\_critico, então 'Não efetuar compra' SeNão 'Efetuar compra'
+		\item Escreva a quantidade média do estoque qtd\_media.
+		\item Escreva a quantidade média do estoque crítico qtd\_media\_critico.
+		\item Escreva a situação do estoque
+		\item Escreva a situação do estoque crítico
+	\end{itemize}
+	}\par
+	\vspace{0.5em}
+	Exemplo:\\
+	entradas de dados 220,400 e 50.\\
+	Saídas\\
+	quantidade média do estoque: 225\\
+	quantidade média do estoque: 175\\
+	situação do estoque: Efetuar compra \# 400+50=450, 450/2=225, 220>=225, SeNão... \\
+	situação do estoque crítico: Não efetuar compra \# 400-50=350, 350/2=175, 220>=175, então...
+	
+\end{frame}
 
 
 
