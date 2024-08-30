@@ -312,4 +312,32 @@ x &  & Novembro & 30/11/2024 & Web Services
 %	reduce height/.default={0pt}
 %}
 
+% é preciso instalar um pacote do pyhton por fora. Use o comando para instalar > pip install Pygments
+\usepackage[newfloat]{minted}
+\setminted{
+	breaklines=true,
+	encoding=utf8,
+	fontseries=heiti,
+	% autogobble=true,
+	frame=lines, % Adiciona uma borda ao redor do código
+	framesep=2mm, % Espaçamento entre a borda e o código
+	baselinestretch=0.75, % Espaçamento entre linhas
+	bgcolor=bg, % Cor de fundo
+%	fontsize=\footnotesize, % Tamanho da fonte
+	fontsize={\fontsize{5.5}{6.5}\selectfont},
+	linenos % Adiciona números de linha
+}   
+
+% learned from issue #238 #69 
+\makeatletter
+\AtBeginEnvironment{minted}{\dontdocolorbox}
+\def\dontdofcolorbox{\renewcommand\fcolorbox[4][]{##4}}
+\AtBeginEnvironment{minted}{\renewcommand{\colorbox}[3][]{#3}}
+\makeatother
+
+% some other elements
+
+
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{name=Código}
 

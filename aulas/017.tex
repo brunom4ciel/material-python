@@ -4,7 +4,7 @@
 \frame{\partpage}
 
 
-\begin{frame}[t]{Exemplos de criação de classe}
+\begin{frame}[t]{Programação Orientada a Objetos}
 	
 	\fontsize{14pt}{15}\selectfont{
 		
@@ -18,6 +18,28 @@
 
 
 
+
+\begin{frame}[t]{Programação Orientada a Objetos}
+	
+	\fontsize{14pt}{15}\selectfont{
+		
+		...relembrando a última aula:
+				
+	}\par
+	\vspace{1em}
+	
+	\fontsize{12pt}{15}\selectfont{
+		\begin{itemize}%[<+->] 
+			
+			\item Na terminologia Python a classe original é chamada de Classe Base, Classe Mãe ou Superclasse (Base, Parent ou Super Class) enquanto que a nova é chamada de Sub Classe ou Classe Filha (Sub ou Child Class).
+			
+			\item A subclasse pode especializar a classe principal ou mesmo estendê-la com novos métodos e atributos.
+			
+		\end{itemize}
+	}\par
+	\vspace{1em}
+	
+\end{frame}
 
 
 \begin{frame}[t]{Exercícios}
@@ -95,8 +117,20 @@
 
 \begin{frame}[t]{Interface com Classes Abstratas - Caso com abc}
 	\vspace{-0.75em}
-	\lstinputlisting[style=CBruno,caption=Classe Produto Abstrata]{outros/codigos/python/exemplos-de-aulas/src/codigo_012_classe_produto_abstrato.py}
-	\vspace{-0.25em}
+%	\lstinputlisting[style=CBruno,caption=Classe Produto Abstrata]{outros/codigos/python/exemplos-de-aulas/src/codigo_012_classe_produto_abstrato.py}
+	
+	\centering
+	\makebox[\linewidth][c]{
+		\begin{minipage}{0.95\textwidth}
+			\inputminted[fontsize={\fontsize{6}{7}\selectfont}]{python}{outros/codigos/python/exemplos-de-aulas/src/codigo_012_classe_produto_abstrato.py}
+		\end{minipage}
+	}
+	\fontsize{7pt}{6}\selectfont{
+		Classe Produto Abstrata - codigo\_012\_classe\_produto\_abstrato.py
+	}\par
+	
+	
+	\vspace{0.25em}
 	\fontsize{9pt}{10}\selectfont{
 		*obs: \textbf{pass} é usada como um espaço reservado quando o código é necessário, mas nenhuma ação específica é exigida. Use \textbf{pass} como um espaço reservado para posteriormente implementação.
 	}\par
@@ -107,20 +141,39 @@
 	
 	\vspace{-0.5em}
 	
-	\lstinputlisting[style=CBruno,caption=Classe Produto Abstrato]{outros/codigos/python/exemplos-de-aulas/src/codigo_012_classe_produto_concreto.py}
+%	\lstinputlisting[style=CBruno,caption=Classe Produto Abstrato]{outros/codigos/python/exemplos-de-aulas/src/codigo_012_classe_produto_concreto.py}
+	\centering
+	\makebox[\linewidth][c]{
+		\begin{minipage}{0.95\textwidth}
+			\inputminted[fontsize={\fontsize{6}{7}\selectfont}]{python}{outros/codigos/python/exemplos-de-aulas/src/codigo_012_classe_produto_concreto.py}
+		\end{minipage}
+	}
+	\fontsize{7pt}{6}\selectfont{
+		Classe Produto Abstrata - codigo\_012\_classe\_produto\_concreto.py
+	}\par
 	
 \end{frame}
 
 
 \begin{frame}[t]{Pytest}
 	
-	\vspace{1em}
-	\lstinputlisting[style=CBruno,caption=Cobertura de testes da classe Produto Concreto]{outros/codigos/python/exemplos-de-aulas/tests/test_codigo_012_classe_produto_concreto.py}
-	
+%	\vspace{1em}
+%	\lstinputlisting[style=CBruno,caption=Cobertura de testes da classe Produto Concreto]{outros/codigos/python/exemplos-de-aulas/tests/test_codigo_012_classe_produto_concreto.py}
+
+	\centering
+	\makebox[\linewidth][c]{
+		\begin{minipage}{0.95\textwidth}
+			\inputminted[baselinestretch=1.15,fontsize={\fontsize{9}{9}\selectfont}]{python}{outros/codigos/python/exemplos-de-aulas/tests/test_codigo_012_classe_produto_concreto.py}
+		\end{minipage}
+	}
+	\fontsize{7pt}{6}\selectfont{
+		Cobertura de testes da classe Produto Concreto - test\_codigo\_012\_classe\_produto\_concreto.py
+	}\par
+
 \end{frame}
 
 
-\begin{frame}[t]{Pytest}
+\begin{frame}[t]{Testes Unitários}
 	
 	
 	\vspace{1em}
@@ -141,23 +194,50 @@
 
 \begin{frame}[t]{Interface com Classes Abstratas - Caso com Exceção}
 	
-	\lstinputlisting[style=CBruno,caption=Classe Produto Abstrato Excecao]{outros/codigos/python/exemplos-de-aulas/src/codigo_013_classe_produto_abstrato_excecao.py}
+%	\lstinputlisting[style=CBruno,caption=Classe Produto Abstrato Excecao]{outros/codigos/python/exemplos-de-aulas/src/codigo_013_classe_produto_abstrato_excecao.py}
+	
+	\centering
+	\makebox[\linewidth][c]{
+		\begin{minipage}{0.95\textwidth}
+			\inputminted[baselinestretch=1,fontsize={\fontsize{8}{8}\selectfont}]{python}{outros/codigos/python/exemplos-de-aulas/src/codigo_013_classe_produto_abstrato_excecao.py}
+		\end{minipage}
+	}
+	\fontsize{7pt}{6}\selectfont{
+		Classe Produto Abstrato Exceção - codigo\_013\_classe\_produto\_abstrato\_excecao.py
+	}\par
+	
 	
 \end{frame}
 
 \begin{frame}[t]{Interface com Classes Abstratas - Caso com Exceção}
-	
 	\vspace{-0.5em}
-	
-	\lstinputlisting[style=CBruno,caption=Classe Produto Concreto Excecao]{outros/codigos/python/exemplos-de-aulas/src/codigo_013_classe_produto_concreto_excecao.py}
-	
+%	\lstinputlisting[style=CBruno,caption=Classe Produto Concreto Excecao]{outros/codigos/python/exemplos-de-aulas/src/codigo_013_classe_produto_concreto_excecao.py}
+	\centering
+	\makebox[\linewidth][c]{
+		\begin{minipage}{0.95\textwidth}
+			\inputminted[fontsize={\fontsize{6}{6}\selectfont}]{python}{outros/codigos/python/exemplos-de-aulas/src/codigo_013_classe_produto_concreto_excecao.py}
+		\end{minipage}
+	}
+	\fontsize{7pt}{6}\selectfont{
+		Classe Produto Concreto Exceção - codigo\_013\_classe\_produto\_abstrato\_excecao.py
+	}\par
 \end{frame}
 
 
-\begin{frame}[t]{Pytest}
+\begin{frame}[t]{Testes Unitários}
 	
-	\vspace{-1em}
-	\lstinputlisting[style=CBruno,caption=Cobertura de testes da classe Produto Concreto Exceção]{outros/codigos/python/exemplos-de-aulas/tests/test_codigo_013_classe_produto_concreto_excecao.py}
+%	\vspace{-1em}
+%	\lstinputlisting[style=CBruno,caption=Cobertura de testes da classe Produto Concreto Exceção]{outros/codigos/python/exemplos-de-aulas/tests/test_codigo_013_classe_produto_concreto_excecao.py}
+	
+	\centering
+	\makebox[\linewidth][c]{
+		\begin{minipage}{0.95\textwidth}
+			\inputminted[baselinestretch=1,fontsize={\fontsize{9}{8}\selectfont}]{python}{outros/codigos/python/exemplos-de-aulas/tests/test_codigo_013_classe_produto_concreto_excecao.py}
+		\end{minipage}
+	}
+	\fontsize{7pt}{6}\selectfont{
+		Cobertura de testes da classe Produto Concreto Exceção - test\_codigo\_013\_classe\_produto\_concreto\_excecao.py
+	}\par
 	
 \end{frame}
 

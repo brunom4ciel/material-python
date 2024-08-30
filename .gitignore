@@ -22,3 +22,7 @@ __pycache__
 */__pycache__/*
 *.coverage
 **/__pycache__
+./htmlcov
+
+**/_minted-material-backend-python/*
+*.pygtex
