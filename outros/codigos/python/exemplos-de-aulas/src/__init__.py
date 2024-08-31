@@ -30,6 +30,7 @@ from .codigo_016_codigo_cliente_factory_method import codigo_cliente_factory_met
 from .codigo_016_documento_factory_method_concreta import DocumentoFactoryMethodConcreta
 from .codigo_016_codigo_cliente_factory_method2 import codigo_cliente_factory_method2
 from .codigo_019_classe_produto_e_produto_critico import codigo_cliente_produto_e_produto_critico
+from .codigo_020_classe_estoque_e_estoque_critico import codigo_cliente_estoque_e_estoque_critico
 
 __all__ = ['somar', 'somar_lambda', 'Produto', 'ProdutoPerecivel', 
            'ProdutoCritico', 'Veiculo', 'obtem_numero', 
@@ -45,7 +46,7 @@ __all__ = ['somar', 'somar_lambda', 'Produto', 'ProdutoPerecivel',
            'codigo_cliente', 'DocumentoAbstrata', 'DocumentoPdfConcreta',
            'DocumentoMsWordConcreta', 'codigo_cliente_factory_method',
            'DocumentoFactoryMethodConcreta', 'codigo_cliente_factory_method2',
-           'codigo_cliente_produto_e_produto_critico']
+           'codigo_cliente_produto_e_produto_critico', 'codigo_cliente_estoque_e_estoque_critico']
 
 # A partir do Python 3.3, o __init__.py se tornou opcional para pacotes. 
 # Se um diretório não contém um __init__.py, ele é considerado um pacote namespace. 
